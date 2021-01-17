@@ -1,0 +1,150 @@
+#page{
+    font-family: 'Cinzel', serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: background-color 1s;
+  }
+  
+  #text{
+    font-size: 20vh;
+    text-shadow: #888 2px 2px 0,
+                 #666 3px 3px 2px,
+                 #888 5px 6px 5px;
+  }
+
+  #psst{
+    font-size: unquote("max(3vh, 5px)");
+    transition: opacity 1s;
+  }
+
+  .show{
+    opacity: 1;
+  }
+
+  .hide{
+    opacity: 0;
+  }
+  
+  span{
+    display: inline-block;
+    transition: color .5s, transform .3s;
+    &:hover{
+      cursor: pointer;
+      transform: translateY(-5%);
+    }
+    &::selection{
+      color: #555;
+    }
+  }
+  
+  #p{
+    width: 5%;
+  }
+  
+  .clicked{
+    -moz-animation: raise .3s linear;
+    -webkit-animation: raise .3s linear;
+    -o-animation: raise .3s linear;
+    animation: raise .3s linear;
+  }
+  
+  @-moz-keyframes raise {
+    0% {transform: translateY(-5%) scale(1);}
+    50% {transform: translateY(5%) scale(1.1);}
+    100% {transform: translateY(-5%) scale(1);}
+  }
+  @-o-keyframes raise {
+    0% {transform: translateY(-5%) scale(1);}
+    50% {transform: translateY(5%) scale(1.1);}
+    100% {transform: translateY(-5%) scale(1);}
+  }
+  @-webkit-keyframes raise {
+    0% {transform: translateY(-5%) scale(1);}
+    50% {transform: translateY(5%) scale(1.1);}
+    100% {transform: translateY(-5%) scale(1);}
+  }
+  @keyframes raise {
+    0% {transform: translateY(-5%) scale(1);}
+    50% {transform: translateY(5%) scale(1.1);}
+    100% {transform: translateY(-5%) scale(1);}
+  }
+  
+  .ex.clicked{
+    -moz-animation: shake .3 linear;
+    -webkit-animation: shake .3s linear;
+    -o-animation: shake .3s linear;
+    animation: shake .3s linear;  
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(-2%, -5%) rotate(4deg); }
+    20% { transform: translate(2%, 1%) rotate(-4deg); }
+    40% { transform: translate(-2%, 3%) rotate(4deg); }
+    50% { transform: translate(0%, 5%) rotate(0deg); }
+    60% { transform: translate(2%, 2%) rotate(-4deg); }
+    80% { transform: translate(-2%, -2%) rotate(4deg); }
+    100% { transform: translate(0%, -5%) rotate(0deg); }
+  }
+
+  @media (min-height: 300px) and (orientation:portrait){
+    #text{
+      font-size: 15vw;
+    }
+
+    #psst{
+      display: none;
+    }
+
+    .clicked {
+      -webkit-animation-name: raiseMob;
+      animation-name: raiseMob;
+    }
+    .ex.clicked {
+      -webkit-animation-name: shakeMob;
+      animation-name: shakeMob;
+    }
+
+    span{
+      &:hover{
+        transform:translate(0px);
+      }
+    }
+    
+  }
+
+  @-moz-keyframes raiseMob {
+    0% {transform: translateY(0%) scale(1);}
+    50% {transform: translateY(5%) scale(1.1);}
+    100% {transform: translateY(0%) scale(1);}
+  }
+  
+  @-o-keyframes raiseMob {
+    0% {transform: translateY(0%) scale(1);}
+    50% {transform: translateY(5%) scale(1.1);}
+    100% {transform: translateY(0%) scale(1);}
+  }
+  @-webkit-keyframes raiseMob {
+    0% {transform: translateY(0%) scale(1);}
+    50% {transform: translateY(5%) scale(1.1);}
+    100% {transform: translateY(0%) scale(1);}
+  }
+  @keyframes raiseMob {
+    0% {transform: translateY(0%) scale(1);}
+    50% {transform: translateY(5%) scale(1.1);}
+    100% {transform: translateY(0%) scale(1);}
+  }
+
+  @keyframes shakeMob {
+    0% { transform: translate(-2%, 0%) rotate(4deg); }
+    20% { transform: translate(2%, 1%) rotate(-4deg); }
+    40% { transform: translate(-2%, 3%) rotate(4deg); }
+    50% { transform: translate(0%, 5%) rotate(0deg); }
+    60% { transform: translate(2%, 3%) rotate(-4deg); }
+    80% { transform: translate(-2%, 1%) rotate(4deg); }
+    100% { transform: translate(0%, 0%) rotate(0deg); }
+  }
