@@ -14,7 +14,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var fcolors = ["#eeeeee", "#2c493f", "#555555", "#470522", "#2A0547"];
+var fcolors = ["black", "#2c493f", "#450874"];
 
 var counts = { "C": Math.floor(Math.random() * fcolors.length),
   "a": Math.floor(Math.random() * fcolors.length),
@@ -81,6 +81,11 @@ var App = function (_React$Component2) {
         "div",
         {
           id: "page" },
+        React.createElement(
+          "a",
+          { id: "menuAnchor" },
+          React.createElement("img", { id: "menuImg", src: "/images/android-chrome-512x512.png" })
+        ),
         React.createElement(
           "p",
           { id: "text" },

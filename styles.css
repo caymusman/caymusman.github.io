@@ -1,46 +1,36 @@
 @-webkit-keyframes blob {
   0% {
     border-radius: 23% 1% 51% 4% / 26% 63% 28% 46%;
-    background: #eee;
   }
   25% {
     border-radius: 63% 43% 92% 64% / 82% 28% 18% 36%;
-    background: #bbb;
   }
   50% {
     border-radius: 28% 93% 25% 22% / 19% 71% 84% 26%;
-    background: #ccc;
   }
   75% {
     border-radius: 82% 17% 99% 84% / 99% 29% 98% 16%;
-    background: #aaa;
   }
   100% {
     border-radius: 34% 82% 3% 63% / 46% 77% 88% 25%;
-    background: #fff;
   }
 }
 
 @keyframes blob {
   0% {
     border-radius: 23% 1% 51% 4% / 26% 63% 28% 46%;
-    background: #eee;
   }
   25% {
     border-radius: 63% 43% 92% 64% / 82% 28% 18% 36%;
-    background: #bbb;
   }
   50% {
     border-radius: 28% 93% 25% 22% / 19% 71% 84% 26%;
-    background: #ccc;
   }
   75% {
     border-radius: 82% 17% 99% 84% / 99% 29% 98% 16%;
-    background: #aaa;
   }
   100% {
     border-radius: 34% 82% 3% 63% / 46% 77% 88% 25%;
-    background: #fff;
   }
 }
 
@@ -109,7 +99,7 @@ body {
 }
 
 #page {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   height: 100vh;
   width: 100vw;
   display: -webkit-box;
@@ -127,14 +117,27 @@ body {
           align-items: center;
   text-align: center;
   background: #eee;
-  background-image: url("https://www.transparenttextures.com/patterns/blue-stripes.png");
   -webkit-animation: blob 16s infinite alternate;
           animation: blob 16s infinite alternate;
+  background-color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+}
+
+#menuAnchor {
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  width: 40px;
+  height: 40px;
+}
+
+#menuImg {
+  width: 45px;
+  height: 45px;
 }
 
 #text {
   font-size: 20vh;
-  text-shadow: #777 2px 2px 0, #888 3px 3px 2px, #999 5px 6px 5px;
 }
 
 #psst {

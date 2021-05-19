@@ -6,7 +6,7 @@
     Change the name!
 */
 
-let fcolors = ["#eeeeee", "#2c493f", "#555555", "#470522", "#2A0547"];
+let fcolors = ["black", "#2c493f", "#450874"];
 
 let counts = {"C": Math.floor(Math.random() * fcolors.length),
              "a": Math.floor(Math.random() * fcolors.length),
@@ -57,6 +57,7 @@ class App extends React.Component{
     return(
       <div 
         id="page">
+        <a id="menuAnchor"><img id="menuImg" src="/images/android-chrome-512x512.png"></img></a>
           <p id="text">
             <MySpan let = "C"></MySpan>
             <MySpan let = "a"></MySpan>
