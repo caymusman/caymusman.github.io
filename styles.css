@@ -127,8 +127,7 @@ body {
   text-align: center;
   -webkit-animation: blob 16s infinite alternate;
           animation: blob 16s infinite alternate;
-  background-color: #eee;
-  background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+  background: radial-gradient(circle, white 22%, #c3c3c3 100%);
 }
 
 #menuAnchor {
@@ -140,6 +139,50 @@ body {
   cursor: pointer;
   -webkit-transition: opacity .5s, visibility .5s;
   transition: opacity .5s, visibility .5s;
+}
+
+#menuAnchor #dropdownDiv {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: opacity .5s, visibility .5s;
+  transition: opacity .5s, visibility .5s;
+  -webkit-filter: drop-shadow(0 0 1px black);
+          filter: drop-shadow(0 0 1px black);
+}
+
+#menuAnchor #dropdownDiv #about {
+  border-radius: 3px 3px 0px 0px;
+  -webkit-transition: opacity .5s, visibility .5s, background-color .2s;
+  transition: opacity .5s, visibility .5s, background-color .2s;
+}
+
+#menuAnchor #dropdownDiv #portfolio {
+  -webkit-transition: opacity 1.5s, visibility 1.5s, background-color .2s;
+  transition: opacity 1.5s, visibility 1.5s, background-color .2s;
+}
+
+#menuAnchor #dropdownDiv #contact {
+  border-radius: 0px 0px 3px 3px;
+  -webkit-transition: opacity 2.5s, visibility 2.5s, background-color .2s;
+  transition: opacity 2.5s, visibility 2.5s, background-color .2s;
+}
+
+#menuAnchor #dropdownDiv .dropdownOption {
+  background-color: #eee;
+  padding: 8px;
+}
+
+#menuAnchor #dropdownDiv .dropdownOption:hover {
+  background-color: #ccc;
+  cursor: pointer;
 }
 
 #menuImg {
@@ -187,64 +230,11 @@ span::selection {
   width: 5%;
 }
 
-#dropdownDiv {
-  position: absolute;
-  left: 35px;
-  top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transition: opacity .5s, visibility .5s;
-  transition: opacity .5s, visibility .5s;
-  -webkit-filter: drop-shadow(0 0 1px black);
-          filter: drop-shadow(0 0 1px black);
-}
-
-#dropdownDiv #about {
-  border-radius: 3px 3px 0px 0px;
-}
-
-#dropdownDiv #ContactMe {
-  border-radius: 0px 0px 3px 3px;
-}
-
-#dropdownDiv #closeDropdown {
-  height: 11px;
-  width: 11px;
-  border-radius: 50%;
-  background: #eee;
-  border: 1px solid #660000;
-  position: relative;
-  left: -5px;
-  top: 6px;
-  cursor: pointer;
-  -webkit-transition: background-color .25s;
-  transition: background-color .25s;
-}
-
-#dropdownDiv #closeDropdown:hover {
-  background-color: black;
-}
-
-#dropdownDiv .dropdownOption {
-  background-color: #eee;
-  padding: 8px;
-}
-
-#dropdownDiv .dropdownOption:hover {
-  background-color: #ccc;
-  cursor: pointer;
-}
-
 #clickHere {
   position: absolute;
   background: #eee;
   border-radius: 5px;
-  padding: 3px;
+  padding: 0px 3px 3px 3px;
   left: 70px;
   top: 4px;
   -webkit-transition: opacity .5s, visibility .5s;

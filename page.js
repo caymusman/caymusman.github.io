@@ -77,7 +77,7 @@ var App = function (_React$Component) {
       this.setState({
         helpTimeout: setTimeout(function () {
           _this3.setState({ arrowVis: "show" });
-        }, 15000)
+        }, 30000)
       });
     }
   }, {
@@ -89,8 +89,9 @@ var App = function (_React$Component) {
           id: "page" },
         React.createElement(
           "a",
-          { id: "menuAnchor", onClick: this.handleDropdown, className: this.state.dropdownVis ? "hide" : "show" },
-          React.createElement("img", { id: "menuImg", src: "/images/android-chrome-512x512.png" })
+          { id: "menuAnchor", onMouseOver: this.handleDropdown, onMouseLeave: this.handleClose },
+          React.createElement("img", { id: "menuImg", src: "/images/android-chrome-512x512.png" }),
+          React.createElement(Dropdown, { visClass: this.state.dropdownVis })
         ),
         React.createElement(
           "p",
@@ -103,7 +104,6 @@ var App = function (_React$Component) {
           ),
           " Enjoying the page? Click here for more!"
         ),
-        React.createElement(Dropdown, { closeDropdown: this.handleClose, visClass: this.state.dropdownVis }),
         React.createElement(
           "p",
           { id: "text" },
@@ -178,21 +178,20 @@ var Dropdown = function (_React$Component3) {
       return React.createElement(
         "div",
         { id: "dropdownDiv", className: this.props.visClass ? "show" : "hide" },
-        React.createElement("div", { id: "closeDropdown", onClick: this.props.closeDropdown }),
         React.createElement(
           "a",
-          { className: "dropdownOption", id: "about" },
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", id: "about" },
           "About"
         ),
         React.createElement(
           "a",
-          { className: "dropdownOption", id: "Portfolio" },
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", id: "portfolio" },
           "Portfolio"
         ),
         React.createElement(
           "div",
-          { className: "dropdownOption", id: "ContactMe" },
-          "Contact Me"
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", id: "contact" },
+          "Contact"
         )
       );
     }

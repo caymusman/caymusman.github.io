@@ -57,7 +57,7 @@ class App extends React.Component{
     this.setState({
       helpTimeout: setTimeout(() => {
         this.setState({arrowVis: "show"})
-      }, 15000)
+      }, 30000)
     })
   }
   
@@ -65,9 +65,12 @@ class App extends React.Component{
     return(
       <div 
         id="page">
-        <a id="menuAnchor" onClick={this.handleDropdown} className={this.state.dropdownVis ? "hide" : "show"}><img id="menuImg" src="/images/android-chrome-512x512.png"></img></a>
+        <a id="menuAnchor" onMouseOver={this.handleDropdown} onMouseLeave={this.handleClose}>
+          <img id="menuImg" src="/images/android-chrome-512x512.png"></img>
+          <Dropdown visClass={this.state.dropdownVis}/>
+        </a>
         <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Click here for more!</p>
-        <Dropdown closeDropdown={this.handleClose} visClass={this.state.dropdownVis}/>
+        
           <p id="text">
             <MySpan let = "C"></MySpan>
             <MySpan let = "a"></MySpan>
@@ -121,10 +124,9 @@ class Dropdown extends React.Component{
   render(){
     return( 
       <div id="dropdownDiv" className={this.props.visClass ? "show" : "hide"}>
-        <div id="closeDropdown" onClick={this.props.closeDropdown}></div>
-        <a className="dropdownOption" id="about">About</a>
-        <a className="dropdownOption" id="Portfolio">Portfolio</a>
-        <div className="dropdownOption" id="ContactMe">Contact Me</div>
+        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"}id="about">About</a>
+        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} id="portfolio">Portfolio</a>
+        <div className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} id="contact">Contact</div>
       </div>
     )
   }
