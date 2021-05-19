@@ -96,6 +96,15 @@
 body {
   background-color: #2c493f;
   background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #page {
@@ -183,6 +192,53 @@ span::selection {
 @media (min-height: 300px) and (orientation: portrait) {
   #text {
     font-size: 15vw;
+  }
+  body {
+    height: 96vh;
+  }
+  @-webkit-keyframes blob {
+    0% {
+      border-radius: 23% 1% 51% 4% / 26% 63% 28% 46%;
+      height: 100vh;
+    }
+    25% {
+      border-radius: 63% 43% 92% 64% / 82% 28% 18% 36%;
+      height: 80vh;
+    }
+    50% {
+      border-radius: 28% 93% 25% 22% / 19% 71% 84% 26%;
+      height: 30vh;
+    }
+    75% {
+      border-radius: 82% 17% 99% 84% / 99% 29% 98% 16%;
+      height: 70vh;
+    }
+    100% {
+      border-radius: 34% 82% 3% 63% / 46% 77% 88% 25%;
+      height: 95vh;
+    }
+  }
+  @keyframes blob {
+    0% {
+      border-radius: 23% 1% 51% 4% / 26% 63% 28% 46%;
+      height: 100vh;
+    }
+    25% {
+      border-radius: 63% 43% 92% 64% / 82% 28% 18% 36%;
+      height: 80vh;
+    }
+    50% {
+      border-radius: 28% 93% 25% 22% / 19% 71% 84% 26%;
+      height: 30vh;
+    }
+    75% {
+      border-radius: 82% 17% 99% 84% / 99% 29% 98% 16%;
+      height: 70vh;
+    }
+    100% {
+      border-radius: 34% 82% 3% 63% / 46% 77% 88% 25%;
+      height: 95vh;
+    }
   }
 }
 /*# sourceMappingURL=styles.css.map */
