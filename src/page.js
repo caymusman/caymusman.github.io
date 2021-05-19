@@ -17,6 +17,71 @@ let counts = {"C": Math.floor(Math.random() * fcolors.length),
              "!": Math.floor(Math.random() * fcolors.length)};
 
 
+class App extends React.Component{
+  constructor(props){
+    super(props);
+
+    this.state={
+      dropdownVis: false,
+      arrowVis: "hide",
+      helpTimeout: null
+    }
+
+    this.handleDropdown=this.handleDropdown.bind(this);
+    this.handleClose=this.handleClose.bind(this);
+  }
+
+  handleDropdown(){
+    if(this.state.helpTimeout){
+      clearTimeout(this.state.helpTimeout)
+      this.setState({
+        helpTimeout: null
+      })
+    }
+    this.setState({
+      dropdownVis: true,
+      arrowVis: "hide",
+    })
+  }
+
+  handleClose(){
+    this.setState({
+      dropdownVis: false,
+      helpTimeout: setTimeout(() => {
+        this.setState({arrowVis: "show"})
+      }, 15000)
+    })
+  }
+
+  componentDidMount(){
+    this.setState({
+      helpTimeout: setTimeout(() => {
+        this.setState({arrowVis: "show"})
+      }, 15000)
+    })
+  }
+  
+  render(){
+    return(
+      <div 
+        id="page">
+        <a id="menuAnchor" onClick={this.handleDropdown} className={this.state.dropdownVis ? "hide" : "show"}><img id="menuImg" src="/images/android-chrome-512x512.png"></img></a>
+        <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Click here for more!</p>
+        <Dropdown closeDropdown={this.handleClose} visClass={this.state.dropdownVis}/>
+          <p id="text">
+            <MySpan let = "C"></MySpan>
+            <MySpan let = "a"></MySpan>
+            <MySpan let = "y"></MySpan>
+            <MySpan let = "m"></MySpan>
+            <MySpan let = "u"></MySpan>
+            <MySpan let = "s"></MySpan>
+            <MySpan let = "!"></MySpan>
+          </p>
+      </div>
+        )
+  }
+}
+
 
 class MySpan extends React.Component{
   constructor(props){
@@ -48,27 +113,20 @@ class MySpan extends React.Component{
   }
 }
 
-class App extends React.Component{
+class Dropdown extends React.Component{
   constructor(props){
-    super(props);
+    super(props)
   }
-  
+
   render(){
-    return(
-      <div 
-        id="page">
-        <a id="menuAnchor"><img id="menuImg" src="/images/android-chrome-512x512.png"></img></a>
-          <p id="text">
-            <MySpan let = "C"></MySpan>
-            <MySpan let = "a"></MySpan>
-            <MySpan let = "y"></MySpan>
-            <MySpan let = "m"></MySpan>
-            <MySpan let = "u"></MySpan>
-            <MySpan let = "s"></MySpan>
-            <MySpan let = "!"></MySpan>
-          </p>
+    return( 
+      <div id="dropdownDiv" className={this.props.visClass ? "show" : "hide"}>
+        <div id="closeDropdown" onClick={this.props.closeDropdown}></div>
+        <a className="dropdownOption" id="about">About</a>
+        <a className="dropdownOption" id="Portfolio">Portfolio</a>
+        <div className="dropdownOption" id="ContactMe">Contact Me</div>
       </div>
-        )
+    )
   }
 }
 

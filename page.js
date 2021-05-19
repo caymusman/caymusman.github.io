@@ -24,28 +24,126 @@ var counts = { "C": Math.floor(Math.random() * fcolors.length),
   "s": Math.floor(Math.random() * fcolors.length),
   "!": Math.floor(Math.random() * fcolors.length) };
 
-var MySpan = function (_React$Component) {
-  _inherits(MySpan, _React$Component);
+var App = function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  function App(props) {
+    _classCallCheck(this, App);
+
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    _this.state = {
+      dropdownVis: false,
+      arrowVis: "hide",
+      helpTimeout: null
+    };
+
+    _this.handleDropdown = _this.handleDropdown.bind(_this);
+    _this.handleClose = _this.handleClose.bind(_this);
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: "handleDropdown",
+    value: function handleDropdown() {
+      if (this.state.helpTimeout) {
+        clearTimeout(this.state.helpTimeout);
+        this.setState({
+          helpTimeout: null
+        });
+      }
+      this.setState({
+        dropdownVis: true,
+        arrowVis: "hide"
+      });
+    }
+  }, {
+    key: "handleClose",
+    value: function handleClose() {
+      var _this2 = this;
+
+      this.setState({
+        dropdownVis: false,
+        helpTimeout: setTimeout(function () {
+          _this2.setState({ arrowVis: "show" });
+        }, 15000)
+      });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this3 = this;
+
+      this.setState({
+        helpTimeout: setTimeout(function () {
+          _this3.setState({ arrowVis: "show" });
+        }, 15000)
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        {
+          id: "page" },
+        React.createElement(
+          "a",
+          { id: "menuAnchor", onClick: this.handleDropdown, className: this.state.dropdownVis ? "hide" : "show" },
+          React.createElement("img", { id: "menuImg", src: "/images/android-chrome-512x512.png" })
+        ),
+        React.createElement(
+          "p",
+          { id: "clickHere", className: this.state.arrowVis },
+          " ",
+          React.createElement(
+            "span",
+            { id: "arrow" },
+            "\u2190"
+          ),
+          " Enjoying the page? Click here for more!"
+        ),
+        React.createElement(Dropdown, { closeDropdown: this.handleClose, visClass: this.state.dropdownVis }),
+        React.createElement(
+          "p",
+          { id: "text" },
+          React.createElement(MySpan, { "let": "C" }),
+          React.createElement(MySpan, { "let": "a" }),
+          React.createElement(MySpan, { "let": "y" }),
+          React.createElement(MySpan, { "let": "m" }),
+          React.createElement(MySpan, { "let": "u" }),
+          React.createElement(MySpan, { "let": "s" }),
+          React.createElement(MySpan, { "let": "!" })
+        )
+      );
+    }
+  }]);
+
+  return App;
+}(React.Component);
+
+var MySpan = function (_React$Component2) {
+  _inherits(MySpan, _React$Component2);
 
   function MySpan(props) {
     _classCallCheck(this, MySpan);
 
-    var _this = _possibleConstructorReturn(this, (MySpan.__proto__ || Object.getPrototypeOf(MySpan)).call(this, props));
+    var _this4 = _possibleConstructorReturn(this, (MySpan.__proto__ || Object.getPrototypeOf(MySpan)).call(this, props));
 
-    _this.advance = function (e) {
+    _this4.advance = function (e) {
       e.stopPropagation();
-      counts[_this.props.let] + 1 > fcolors.length - 1 ? counts[_this.props.let] = 0 : counts[_this.props.let] += 1;
-      _this.setState({
-        showColor: fcolors[counts[_this.props.let]]
+      counts[_this4.props.let] + 1 > fcolors.length - 1 ? counts[_this4.props.let] = 0 : counts[_this4.props.let] += 1;
+      _this4.setState({
+        showColor: fcolors[counts[_this4.props.let]]
       });
     };
 
-    _this.state = {
+    _this4.state = {
       showColor: fcolors[Math.floor(Math.random() * fcolors.length)]
     };
 
-    _this.advance = _this.advance.bind(_this);
-    return _this;
+    _this4.advance = _this4.advance.bind(_this4);
+    return _this4;
   }
 
   _createClass(MySpan, [{
@@ -65,43 +163,42 @@ var MySpan = function (_React$Component) {
   return MySpan;
 }(React.Component);
 
-var App = function (_React$Component2) {
-  _inherits(App, _React$Component2);
+var Dropdown = function (_React$Component3) {
+  _inherits(Dropdown, _React$Component3);
 
-  function App(props) {
-    _classCallCheck(this, App);
+  function Dropdown(props) {
+    _classCallCheck(this, Dropdown);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+    return _possibleConstructorReturn(this, (Dropdown.__proto__ || Object.getPrototypeOf(Dropdown)).call(this, props));
   }
 
-  _createClass(App, [{
+  _createClass(Dropdown, [{
     key: "render",
     value: function render() {
       return React.createElement(
         "div",
-        {
-          id: "page" },
+        { id: "dropdownDiv", className: this.props.visClass ? "show" : "hide" },
+        React.createElement("div", { id: "closeDropdown", onClick: this.props.closeDropdown }),
         React.createElement(
           "a",
-          { id: "menuAnchor" },
-          React.createElement("img", { id: "menuImg", src: "/images/android-chrome-512x512.png" })
+          { className: "dropdownOption", id: "about" },
+          "About"
         ),
         React.createElement(
-          "p",
-          { id: "text" },
-          React.createElement(MySpan, { "let": "C" }),
-          React.createElement(MySpan, { "let": "a" }),
-          React.createElement(MySpan, { "let": "y" }),
-          React.createElement(MySpan, { "let": "m" }),
-          React.createElement(MySpan, { "let": "u" }),
-          React.createElement(MySpan, { "let": "s" }),
-          React.createElement(MySpan, { "let": "!" })
+          "a",
+          { className: "dropdownOption", id: "Portfolio" },
+          "Portfolio"
+        ),
+        React.createElement(
+          "div",
+          { className: "dropdownOption", id: "ContactMe" },
+          "Contact Me"
         )
       );
     }
   }]);
 
-  return App;
+  return Dropdown;
 }(React.Component);
 
 ReactDOM.render(React.createElement(App, null), document.getElementById("App"));

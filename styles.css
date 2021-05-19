@@ -9,7 +9,7 @@
     border-radius: 28% 93% 25% 22% / 19% 71% 84% 26%;
   }
   75% {
-    border-radius: 82% 17% 99% 84% / 99% 29% 98% 16%;
+    border-radius: 82% 17% 99% 84% / 99% 77% 98% 16%;
   }
   100% {
     border-radius: 34% 82% 3% 63% / 46% 77% 88% 25%;
@@ -27,7 +27,7 @@
     border-radius: 28% 93% 25% 22% / 19% 71% 84% 26%;
   }
   75% {
-    border-radius: 82% 17% 99% 84% / 99% 29% 98% 16%;
+    border-radius: 82% 17% 99% 84% / 99% 77% 98% 16%;
   }
   100% {
     border-radius: 34% 82% 3% 63% / 46% 77% 88% 25%;
@@ -125,10 +125,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: #eee;
   -webkit-animation: blob 16s infinite alternate;
           animation: blob 16s infinite alternate;
-  background-color: white;
+  background-color: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
 }
 
@@ -138,6 +137,9 @@ body {
   top: 13px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
+  -webkit-transition: opacity .5s, visibility .5s;
+  transition: opacity .5s, visibility .5s;
 }
 
 #menuImg {
@@ -149,17 +151,13 @@ body {
   font-size: 20vh;
 }
 
-#psst {
-  font-size: max(3vh, 5px);
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-}
-
 .show {
   opacity: 1;
+  visibility: visible;
 }
 
 .hide {
+  visibility: hidden;
   opacity: 0;
 }
 
@@ -187,6 +185,82 @@ span::selection {
 
 #p {
   width: 5%;
+}
+
+#dropdownDiv {
+  position: absolute;
+  left: 35px;
+  top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: opacity .5s, visibility .5s;
+  transition: opacity .5s, visibility .5s;
+  -webkit-filter: drop-shadow(0 0 1px black);
+          filter: drop-shadow(0 0 1px black);
+}
+
+#dropdownDiv #about {
+  border-radius: 3px 3px 0px 0px;
+}
+
+#dropdownDiv #ContactMe {
+  border-radius: 0px 0px 3px 3px;
+}
+
+#dropdownDiv #closeDropdown {
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  background: #eee;
+  border: 1px solid #660000;
+  position: relative;
+  left: -5px;
+  top: 6px;
+  cursor: pointer;
+  -webkit-transition: background-color .25s;
+  transition: background-color .25s;
+}
+
+#dropdownDiv #closeDropdown:hover {
+  background-color: black;
+}
+
+#dropdownDiv .dropdownOption {
+  background-color: #eee;
+  padding: 8px;
+}
+
+#dropdownDiv .dropdownOption:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#clickHere {
+  position: absolute;
+  background: #eee;
+  border-radius: 5px;
+  padding: 3px;
+  left: 70px;
+  top: 4px;
+  -webkit-transition: opacity .5s, visibility .5s;
+  transition: opacity .5s, visibility .5s;
+}
+
+#clickHere span {
+  font-size: 20px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
 }
 
 @media (min-height: 300px) and (orientation: portrait) {
