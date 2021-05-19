@@ -69,7 +69,7 @@ class App extends React.Component{
           <img id="menuImg" src="/images/android-chrome-512x512.png"></img>
           <Dropdown visClass={this.state.dropdownVis}/>
         </a>
-        <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Click here for more!</p>
+        <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Hover here for more!</p>
         
           <p id="text">
             <MySpan let = "C"></MySpan>
