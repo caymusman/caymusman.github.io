@@ -124,9 +124,9 @@ class Dropdown extends React.Component{
   render(){
     return( 
       <div id="dropdownDiv" className={this.props.visClass ? "show" : "hide"}>
-        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"}id="about">About</a>
-        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} id="portfolio">Portfolio</a>
-        <div className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} id="contact">Contact</div>
+        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../public/about.html" id="about">About</a>
+        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../public/portfolio.html" id="portfolio">Portfolio</a>
+        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../public/contact.html" id="contact">Contact</a>
       </div>
     )
   }

@@ -141,6 +141,15 @@ body {
   transition: opacity .5s, visibility .5s;
 }
 
+#menuAnchor a {
+  text-decoration: none;
+}
+
+#menuAnchor a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 #menuAnchor #dropdownDiv {
   position: absolute;
   left: 0px;

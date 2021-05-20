@@ -49,6 +49,15 @@ body{
     cursor: pointer;
     transition: opacity .5s, visibility .5s;
 
+    a{
+      text-decoration: none;
+
+      &:visited{
+        text-decoration: none;
+        color: black;
+      }
+    }
+
 
     #dropdownDiv{
       position: absolute;

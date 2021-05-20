@@ -180,17 +180,17 @@ var Dropdown = function (_React$Component3) {
         { id: "dropdownDiv", className: this.props.visClass ? "show" : "hide" },
         React.createElement(
           "a",
-          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", id: "about" },
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../public/about.html", id: "about" },
           "About"
         ),
         React.createElement(
           "a",
-          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", id: "portfolio" },
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../public/portfolio.html", id: "portfolio" },
           "Portfolio"
         ),
         React.createElement(
-          "div",
-          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", id: "contact" },
+          "a",
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../public/contact.html", id: "contact" },
           "Contact"
         )
       );
