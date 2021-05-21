@@ -66,7 +66,7 @@ var App = function (_React$Component) {
         dropdownVis: false,
         helpTimeout: setTimeout(function () {
           _this2.setState({ arrowVis: "show" });
-        }, 15000)
+        }, 30000)
       });
     }
   }, {
@@ -77,7 +77,7 @@ var App = function (_React$Component) {
       this.setState({
         helpTimeout: setTimeout(function () {
           _this3.setState({ arrowVis: "show" });
-        }, 30000)
+        }, 15000)
       });
     }
   }, {
@@ -102,7 +102,7 @@ var App = function (_React$Component) {
             { id: "arrow" },
             "\u2190"
           ),
-          " Enjoying the page? Hover here for more!"
+          " Enjoying the page? Check here for more!"
         ),
         React.createElement(
           "p",
@@ -180,17 +180,17 @@ var Dropdown = function (_React$Component3) {
         { id: "dropdownDiv", className: this.props.visClass ? "show" : "hide" },
         React.createElement(
           "a",
-          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../about/", id: "about" },
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../about", id: "about" },
           "About"
         ),
         React.createElement(
           "a",
-          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../portfolio/", id: "portfolio" },
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../portfolio", id: "portfolio" },
           "Portfolio"
         ),
         React.createElement(
           "a",
-          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../contact/", id: "contact" },
+          { className: this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption", href: "../contact", id: "contact" },
           "Contact"
         )
       );

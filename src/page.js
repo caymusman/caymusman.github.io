@@ -49,7 +49,7 @@ class App extends React.Component{
       dropdownVis: false,
       helpTimeout: setTimeout(() => {
         this.setState({arrowVis: "show"})
-      }, 15000)
+      }, 30000)
     })
   }
 
@@ -57,7 +57,7 @@ class App extends React.Component{
     this.setState({
       helpTimeout: setTimeout(() => {
         this.setState({arrowVis: "show"})
-      }, 30000)
+      }, 15000)
     })
   }
   
@@ -69,7 +69,7 @@ class App extends React.Component{
           <img id="menuImg" src="/images/android-chrome-512x512.png"></img>
           <Dropdown visClass={this.state.dropdownVis}/>
         </a>
-        <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Hover here for more!</p>
+        <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Check here for more!</p>
         
           <p id="text">
             <MySpan let = "C"></MySpan>
@@ -124,9 +124,9 @@ class Dropdown extends React.Component{
   render(){
     return( 
       <div id="dropdownDiv" className={this.props.visClass ? "show" : "hide"}>
-        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../about/" id="about">About</a>
-        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../portfolio/" id="portfolio">Portfolio</a>
-        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../contact/" id="contact">Contact</a>
+        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../about" id="about">About</a>
+        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../portfolio" id="portfolio">Portfolio</a>
+        <a className={this.props.visClass ? "show + dropdownOption" : "hide + dropdownOption"} href="../contact" id="contact">Contact</a>
       </div>
     )
   }
