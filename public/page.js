@@ -100,23 +100,19 @@ var App = function (_React$Component) {
             "span",
             { id: "arrow" },
             "\u2190"
-          ),
-          " Enjoying the page? Check here for more!"
-        ),
-        React.createElement(
-          "div",
-          { id: "page" },
-          React.createElement(
-            "p",
-            { id: "text" },
-            React.createElement(MySpan, { "let": "C" }),
-            React.createElement(MySpan, { "let": "a" }),
-            React.createElement(MySpan, { "let": "y" }),
-            React.createElement(MySpan, { "let": "m" }),
-            React.createElement(MySpan, { "let": "u" }),
-            React.createElement(MySpan, { "let": "s" }),
-            React.createElement(MySpan, { "let": "!" })
           )
+        ),
+        React.createElement("div", { id: "page" }),
+        React.createElement(
+          "p",
+          { id: "text" },
+          React.createElement(MySpan, { "let": "C" }),
+          React.createElement(MySpan, { "let": "a" }),
+          React.createElement(MySpan, { "let": "y" }),
+          React.createElement(MySpan, { "let": "m" }),
+          React.createElement(MySpan, { "let": "u" }),
+          React.createElement(MySpan, { "let": "s" }),
+          React.createElement(MySpan, { "let": "!" })
         )
       );
     }

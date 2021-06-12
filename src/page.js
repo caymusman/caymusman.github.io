@@ -68,10 +68,11 @@ class App extends React.Component{
             <img id="menuImg" src="/images/android-chrome-512x512.png"></img>
             <Dropdown visClass={this.state.dropdownVis}/>
           </a>
-          <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Check here for more!</p>
+          <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span></p>
           
         <div id="page">
-            <p id="text">
+        </div>
+        <p id="text">
               <MySpan let = "C"></MySpan>
               <MySpan let = "a"></MySpan>
               <MySpan let = "y"></MySpan>
@@ -80,7 +81,6 @@ class App extends React.Component{
               <MySpan let = "s"></MySpan>
               <MySpan let = "!"></MySpan>
             </p>
-        </div>
       </div>
         )
   }
