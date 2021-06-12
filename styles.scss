@@ -25,6 +25,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  #main{
+    height: 100vh;
+    width: 100vw;
+  }
 }
 
 #page{
@@ -32,71 +39,74 @@ body{
     height: 100vh;
     width: 100vw;
     display: flex;
+    align-self: center;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
     animation: blob 16s infinite alternate;
     background: radial-gradient(circle, rgba(255,255,255,1) 22%, rgba(195,195,195,1) 100%);
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+#menuAnchor{
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: opacity .5s, visibility .5s;
+
+  a{
+    text-decoration: none;
+    color: black;
+
+    &:link {color:black;}
+
+    &:visited {color:black;}
+
+    &:hover {color:black;}  
+
+    &:active {color:black;} 
   }
 
-  #menuAnchor{
+
+  #dropdownDiv{
     position: absolute;
-    left: 13px;
-    top: 13px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+    left: 0px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
     transition: opacity .5s, visibility .5s;
-
-    a{
-      text-decoration: none;
-      color: black;
-
-      &:link {color:black;}
-
-      &:visited {color:black;}
-
-      &:hover {color:black;}  
-
-      &:active {color:black;} 
-    }
-
-
-    #dropdownDiv{
-      position: absolute;
-      left: 0px;
-      top: 50px;
-      display: flex;
-      flex-direction: column;
-      transition: opacity .5s, visibility .5s;
-      filter: drop-shadow(0 0 1px black);
+    filter: drop-shadow(0 0 1px black);
+    z-index: 3;
   
-        #about{
-          border-radius: 3px 3px 0px 0px;
-          transition: opacity .5s, visibility .5s, background-color .2s;
-        }
-  
-        #portfolio{
-          transition: opacity 1.5s, visibility 1.5s, background-color .2s;
-        }
-  
-        #contact{
-          border-radius: 0px 0px 3px 3px;
-          transition: opacity 2.5s, visibility 2.5s, background-color .2s;
-        }
-  
-        .dropdownOption{
-          background-color: #eee;
-          padding: 8px;
-  
-          &:hover{
-            background-color: #ccc;
-            cursor: pointer;
-          }
+      #about{
+        border-radius: 3px 3px 0px 0px;
+        transition: opacity .5s, visibility .5s, background-color .2s;
       }
+  
+      #portfolio{
+        transition: opacity 1.5s, visibility 1.5s, background-color .2s;
+      }
+  
+      #contact{
+        border-radius: 0px 0px 3px 3px;
+        transition: opacity 2.5s, visibility 2.5s, background-color .2s;
+      }
+  
+      .dropdownOption{
+        background-color: #eee;
+        padding: 8px;
+  
+        &:hover{
+          background-color: #ccc;
+          cursor: pointer;
+        }
     }
   }
+}
 
   #menuImg{
     width: 45px;
@@ -120,7 +130,9 @@ body{
   
   span{
     display: inline-block;
+    align-self: center;
     transition: color .5s, transform .3s;
+    filter: drop-shadow(1px 1px black);
     &:hover{
       cursor: pointer;
       transform: translateY(5px);
@@ -143,6 +155,7 @@ body{
     left: 70px;
     top: 4px;
     transition: opacity .5s, visibility .5s;
+    z-index: 3;
 
     span{
       font-size: 20px;

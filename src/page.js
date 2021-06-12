@@ -63,23 +63,24 @@ class App extends React.Component{
   
   render(){
     return(
-      <div 
-        id="page">
+      <div id="main">
         <a id="menuAnchor" onMouseOver={this.handleDropdown} onMouseLeave={this.handleClose}>
-          <img id="menuImg" src="/images/android-chrome-512x512.png"></img>
-          <Dropdown visClass={this.state.dropdownVis}/>
-        </a>
-        <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Check here for more!</p>
-        
-          <p id="text">
-            <MySpan let = "C"></MySpan>
-            <MySpan let = "a"></MySpan>
-            <MySpan let = "y"></MySpan>
-            <MySpan let = "m"></MySpan>
-            <MySpan let = "u"></MySpan>
-            <MySpan let = "s"></MySpan>
-            <MySpan let = "!"></MySpan>
-          </p>
+            <img id="menuImg" src="/images/android-chrome-512x512.png"></img>
+            <Dropdown visClass={this.state.dropdownVis}/>
+          </a>
+          <p id="clickHere" className={this.state.arrowVis}> <span id="arrow">←</span> Enjoying the page? Check here for more!</p>
+          
+        <div id="page">
+            <p id="text">
+              <MySpan let = "C"></MySpan>
+              <MySpan let = "a"></MySpan>
+              <MySpan let = "y"></MySpan>
+              <MySpan let = "m"></MySpan>
+              <MySpan let = "u"></MySpan>
+              <MySpan let = "s"></MySpan>
+              <MySpan let = "!"></MySpan>
+            </p>
+        </div>
       </div>
         )
   }

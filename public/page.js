@@ -85,8 +85,7 @@ var App = function (_React$Component) {
     value: function render() {
       return React.createElement(
         "div",
-        {
-          id: "page" },
+        { id: "main" },
         React.createElement(
           "a",
           { id: "menuAnchor", onMouseOver: this.handleDropdown, onMouseLeave: this.handleClose },
@@ -105,15 +104,19 @@ var App = function (_React$Component) {
           " Enjoying the page? Check here for more!"
         ),
         React.createElement(
-          "p",
-          { id: "text" },
-          React.createElement(MySpan, { "let": "C" }),
-          React.createElement(MySpan, { "let": "a" }),
-          React.createElement(MySpan, { "let": "y" }),
-          React.createElement(MySpan, { "let": "m" }),
-          React.createElement(MySpan, { "let": "u" }),
-          React.createElement(MySpan, { "let": "s" }),
-          React.createElement(MySpan, { "let": "!" })
+          "div",
+          { id: "page" },
+          React.createElement(
+            "p",
+            { id: "text" },
+            React.createElement(MySpan, { "let": "C" }),
+            React.createElement(MySpan, { "let": "a" }),
+            React.createElement(MySpan, { "let": "y" }),
+            React.createElement(MySpan, { "let": "m" }),
+            React.createElement(MySpan, { "let": "u" }),
+            React.createElement(MySpan, { "let": "s" }),
+            React.createElement(MySpan, { "let": "!" })
+          )
         )
       );
     }
