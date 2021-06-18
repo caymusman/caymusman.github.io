@@ -1,15 +1,8 @@
-@keyframes blob {
-  0% {border-radius: 23% 1% 51% 4% / 26% 63% 28% 46%;
-      height: 90%; width: 90%}
-  25% {border-radius:63% 43% 92% 64% / 82% 28% 18% 36%;
-      height: 95%; width: 87%}
-  50% {border-radius: 28% 93% 25% 22% / 19% 71% 84% 26%;
-      height: 85%; width: 100%}
-  75% {border-radius: 82% 17% 99% 84% / 99% 77% 98% 16%;
-      height: 94%; width: 79%}
-  100% {border-radius: 50%;
-      height: 89%; width: 93%}
-}
+
+$green: #235037;
+$purple: darken(#450874, 15%);
+$black: black;
+
 
 @keyframes point {
   0% {transform: translateX(0px);}
@@ -17,42 +10,20 @@
   100% {transform: translateX(0px);}
 }
 
-@keyframes ex {
-  0% {transform: rotate(4deg) translateY(0px);}
-  20% {transform: rotate(0deg) translateY(1px);}
-  40% {transform: rotate(-4deg) translateY(2px);}
-  60% {transform: rotate(0deg) translateY(3px);}
-  80% {transform: rotate(4deg) translateY(4px);}
-  100% {transform: rotate(0deg) translateY(5px);}
-}
-
-.ex:hover{
-  animation: ex .3s linear;
+html{
+  scroll-behavior: smooth;
 }
 
 body{
-  background-color:#2c493f;
+  width: 98vw;
+  background-color: $green;
   background-image: url("/images/blu-stripes.png");
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
 
-  #main{
-    height: 100vh;
+  #landing{
+    height: 50vh;
     width: 100vw;
+    position: relative;
   }
-}
-
-#page{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: blob 16s infinite alternate;
-    background: radial-gradient(circle, rgba(255,255,255,1) 22%, rgba(195,195,195,1) 100%);
-    filter: drop-shadow(2px 2px 4px black);
 }
 
 #menuAnchor{
@@ -66,15 +37,9 @@ body{
 
   a{
     text-decoration: none;
-    color: black;
+    color: $green;
 
-    &:link {color:black;}
-
-    &:visited {color:black;}
-
-    &:hover {color:black;}  
-
-    &:active {color:black;} 
+    &:link, &:visited, &:hover, &:active {color:$green;}
   }
 
 
@@ -209,4 +174,11 @@ body{
       100% {border-radius: 34% 82% 3% 63% / 46% 77% 88% 25%;
           height: 95vh;}
     }
+  }
+
+  #hey{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: white;
   }
