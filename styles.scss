@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap'); //pomodoro
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap'); //air
 
-//109 115 94
 
 $green: #263d35;
 $caymusFont: 10vh;
@@ -26,17 +25,16 @@ body{
     padding: 0;
 }
 
-#white, #green {
+#white, #green { //overlapping Divs to create color swap effect (mix-blend-mode doesn't work with white)
     position: absolute;
     white-space: nowrap;
     overflow: hidden;
     font-size: $caymusFont;
     text-align: center;
-    //for every 1 up in font-size, change 1.5 down in top;
     p{
         position: absolute;
         left: 50%;
-        top: calc(50vh - calc(#{$caymusFont} * 1.5));
+        top: calc(50vh - calc(#{$caymusFont} * 1.5)); //for every 1 up in font-size, change 1.5 down in top;
         transform: translateX(-50%);
     }
 }
@@ -91,7 +89,7 @@ body{
 h3{
     font-size: 2vmax;
 
-    &:after{
+    &:after{ //underline for sections
         content: "";
         display: block;
         width: 0%;
@@ -104,7 +102,7 @@ h3{
         }
     }
 }
-.nav{
+.nav{ //nav at top w/ underlines
     margin-top: 1%;
     position: absolute;
     right: 3%;
@@ -140,7 +138,7 @@ h3{
     color: $green;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; //img overflows height when width still large
 
     #aboutImg{
         position: relative;
@@ -148,7 +146,7 @@ h3{
         display: grid;
         place-items: center;
 
-        img{
+        img{ //auto resize img
             max-width: 100%;
             height: auto;
             border-radius: 50%;
@@ -176,7 +174,7 @@ h3{
             display: flex;
             justify-content: space-evenly;
 
-            .socials{
+            .socials{ //social icons
                 img{
                     width: 1.5rem;
                     height: 1.5rem;
@@ -197,6 +195,8 @@ h3{
                     color: $green;
                 }
             }
+
+            //handle text effects in paragraph
     
             #nameSpan{
                 &:hover{
@@ -247,6 +247,8 @@ h3{
     }
 
 }
+
+
 
 #projects{
     height: 100vh;
@@ -307,7 +309,7 @@ h3{
         
     }
         
-    .carousel_cell {
+    .carousel_cell { //each cell w/ size. If changed, change corresponding JS bc math
         box-shadow: 1px 1px 1px 1px black;
         position: absolute;
         width: 40vw;
@@ -318,7 +320,7 @@ h3{
         border-radius: 5px;
         overflow: scroll;
 
-        -ms-overflow-style: none;
+        -ms-overflow-style: none; //no scrollbar, will overflow when height ~1/3W
         scrollbar-width: none; 
         &:-webkit-scrollbar{
             display: none;
@@ -332,6 +334,8 @@ h3{
        
         background-color: #eee;
         color: $green;
+
+        //default Card stylings to follow. On hover, go to unique stylings
 
         .carGit{
             position: absolute;
@@ -370,7 +374,6 @@ h3{
 
         .carTech{
             font-size: 1.2vmax;
-            border: 1px solid #ddd;
             background-color: #eee;
 
             span{
@@ -413,6 +416,7 @@ h3{
     }   
 }
 
+//tech bubble colors
 .node{
     background-color: #ecdefc;
 }
@@ -448,6 +452,8 @@ h3{
 .js{
     background-color: rgb(252, 250, 224);
 }
+
+//unique hover styling
 #modular{
     &:hover{
         background-image: none;
@@ -590,7 +596,7 @@ h3{
 
 
 
-
+//handle height > width
 @media screen and (orientation: portrait){
 
     h3{
@@ -668,7 +674,7 @@ h3{
         }
     }
 
-    //fix carousel on mobile!
+    //handle no hover (together with ^^ it handles mobile)
 
     @media screen and (hover: none){
         #projects{

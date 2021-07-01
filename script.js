@@ -62,7 +62,7 @@ let carSix = document.querySelector(".carousel_cell:nth-child(6)");
 function getZOff(){
     let width = carOne.offsetWidth;
     zOff = Math.round( ( width / 2 ) / Math.tan( ( ( Math.PI * 2 ) / 6 ) / 2 ));
-    zOff += .06 * zOff;
+    zOff += .06 * zOff; //handles cell spacing
 }
 
 function handleResize(){
