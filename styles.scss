@@ -693,14 +693,18 @@ h3{
                 }
 
                 .carTitle{
-                    font-size: 2.3vmax;
+                    font-size: 2.1vmax;
                 }
                 .carDesc{
-                    font-size: 2vmax;
+                    font-size: 1.8vmax;
                 }
                 .carTech{
                     border: none;
                     font-size: 1.3vmax;
+
+                    span{
+                        margin: 2px;
+                    }
                 }
             }   
             #modular{
@@ -717,6 +721,7 @@ h3{
 
                 .carDesc{
                     background-color: revert;
+                    font-size: 1.5vmax;
                 }
 
                 .carTech{
@@ -743,6 +748,8 @@ h3{
             
                 .carDesc{
                     background-color: revert; 
+                    font-size: 1.5vmax;
+                    text-align: center;
                 }
             
                 .carTech{

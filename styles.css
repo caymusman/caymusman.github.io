@@ -635,14 +635,17 @@ h3:hover:after {
     display: block;
   }
   #projects .carousel_cell .carTitle {
-    font-size: 2.3vmax;
+    font-size: 2.1vmax;
   }
   #projects .carousel_cell .carDesc {
-    font-size: 2vmax;
+    font-size: 1.8vmax;
   }
   #projects .carousel_cell .carTech {
     border: none;
     font-size: 1.3vmax;
+  }
+  #projects .carousel_cell .carTech span {
+    margin: 2px;
   }
   #projects #modular {
     background-image: none;
@@ -654,6 +657,7 @@ h3:hover:after {
   }
   #projects #modular .carDesc {
     background-color: revert;
+    font-size: 1.5vmax;
   }
   #projects #modular .carTech {
     background-color: revert;
@@ -673,6 +677,8 @@ h3:hover:after {
   }
   #projects #air .carDesc {
     background-color: revert;
+    font-size: 1.5vmax;
+    text-align: center;
   }
   #projects #air .carTech {
     background-color: revert;
