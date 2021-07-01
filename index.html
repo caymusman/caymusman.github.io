@@ -1,27 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caymus Price</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/site.webmanifest">     
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div id="landing"></div>
 
-    <div id="hey">This site is being reworked.</div>
+    <div class="landing">
+        <div id="green" data-aos="fade-up">
+            <p id="greenText"></p>
+            <nav id="greenNav" class="nav" data-aos="fade-left">
+                <a id="greenAbout" href="#about">About</a>
+                <a id="greenProjects" href="#projects">Projects</a>
+            </nav>
+        </div>
+        <div id="white" data-aos="fade-down">
+            <p id="whiteText"></p>
+            <nav id="whiteNav" class="nav" data-aos="fade-left">
+                <a id="whiteAbout" href="#about">About</a>
+                <a id="whiteProjects" href="#projects">Projects</a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="about">
+        <div id="aboutContent">
+            <h3 id="aboutTitle"  data-aos="fade-right">About</h3>
+            <p  data-aos="fade-right">Hi! I'm <span id="nameSpan">Caymus Price</span> (he/him), a 22 year old currently living in <span id="seattleSpan">Seattle, WA</span>.
+                I graduated from <span id="brownSpan">Brown University</span> in May of 2020 with a degree in <span id="memeSpan">Multimedia and Electronic Music Experiments</span>.</p>
+            <p  data-aos="fade-right">My <span id="majorSpan"><span>concentration</span></span> in college was about designing and programming my own tools for production -
+                a process that helped me run head first into the conclusion that I knew way less about programming than I thought. 
+                In the quest to get better, I found webdev, and fell in <span id="loveSpan">love</span>.</p>
+            <p  data-aos="fade-right">I'm a big fan of goldfish crackers, beanies, and being slightly above mediocre at video games. 
+                Feel free to reach out to me at any of the <a target="_blank" href="https://en.wikipedia.org/wiki/Meta">links</a> below.</p>
+                <div id="socialDiv"  data-aos="fade-up">
+                    <a class="socials" href="https://github.com/caymusman/"><img src="svg/github.svg"></img></a>
+                    <a class="socials" href="mailto:caymusprice@gmail.com"><img src="svg/mail.svg"></img></a>
+                </div>
+        </div>
+        <div data-aos="fade-left" id="aboutImg">
+            <img src="/img/caymus.JPG" alt="a picture of me">
+        </div>
+    </div>
 
 
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>  
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="public/page.js"></script>
+    <div id="projects">
+        <h3 data-aos="fade-right">Projects</h3>
+        <img id="carPrev" src="svg/previous.svg" data-aos="fade-right"></img>
+        <div class="scene" data-aos="zoom-in">
+            <div id="carousel" class="carousel">
+              <div class="carousel_cell" id="modular">
+                  <p class="carTitle"><a href="https://caym.us/modular/" target="_blank">modular</a></p>
+                  <p class="carDesc">A draggable modular synth app with microphone input and recording</p>
+                  <p class="carTech"><span class="react">React</span> <span class="scss">SCSS</span> <span class="webaudio">WebAudioAPI</span></p>
+                  <a class="carGit" target="_blank" href="https://github.com/caymusman/modular"><img src="svg/github.svg"><img src="svg/whitegit.svg"></img></a>
+              </div>
+              <div class="carousel_cell" id="air">
+                <p class="carTitle"><a href="https://cp-air-pollution.herokuapp.com/" target="_blank">air</a></p>
+                <p class="carDesc">Full-stack air pollution infosite with data from OpenWeatherAPI</p>
+                <p class="carTech"><span class="node">Node</span><span class="express">Express</span><span class="react">React</span> <span class="scss">SCSS</span> <span class="apis">APIs</span></p>
+                <a class="carGit" target="_blank" href="https://github.com/caymusman/air"><img src="svg/github.svg"><img src="svg/whitegit.svg"></img></a>
+              </div>
+              <div class="carousel_cell" id="pomodoro">
+                <p class="carTitle"><a href="https://caym.us/pomodoro/" target="_blank">pomodoro</a></p>
+                <p class="carDesc">A sleek pomodoro clock with svg animation</p>
+                <p class="carTech"><span class="react">React</span> <span class="scss">SCSS</span></p>
+                <a class="carGit"target="_blank" href="https://github.com/caymusman/pomodoro"><img src="svg/github.svg"><img src="svg/graygit.svg"></img></a>
+              </div>
+              <div class="carousel_cell" id="drum-machine">
+                <p class="carTitle"><a href="https://caym.us/drum-machine/" target="_blank">drum-machine</a></p>
+                <p class="carDesc">A key input drum machine with HTML5 audio elements</p>
+                <p class="carTech"><span class="react">React</span> <span class="scss">SCSS</span></p>
+                <a class="carGit" target="_blank" href="https://github.com/caymusman/drum-machine"><img src="svg/github.svg"><img src="svg/graygit.svg"></img></a>
+              </div>
+              <div class="carousel_cell" id="calculator">
+                <p class="carTitle"><a href="https://caym.us/calculator/" target="_blank">calculator</a></p>
+                <p class="carDesc">A simple, responsive, and mobile-friendly React calculator</p>
+                <p class="carTech"><span class="react">React</span> <span class="scss">SCSS</span></p>
+                <a class="carGit" target="_blank" href="https://github.com/caymusman/calculator"><img src="svg/github.svg"><img src="svg/whitegit.svg"></img></a>
+              </div>
+              <div class="carousel_cell" id="this">
+                <p class="carTitle"><a href="#green">caym.us</a></p>
+                <p class="carDesc">Portfolio site with Vanilla JS, HTML, and CSS</p>
+                <p class="carTech"><span class="html">HTML</span><span class="css">CSS</span><span class="js">JS</span></p>
+                <a class="carGit" target="_blank" href="https://github.com/caymusman/caymusman.github.io"><img src="svg/github.svg"><img src="svg/whitegit.svg"></img></a>
+              </div>
+            </div>
+          </div>
+          <img id="carNext" src="svg/next.svg" data-aos="fade-left"></img>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>  
+    <script src="script.js"></script>
 </body>
 </html>
