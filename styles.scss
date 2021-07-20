@@ -34,7 +34,7 @@ body{
     p{
         position: absolute;
         left: 50%;
-        top: calc(50vh - calc(#{$caymusFont} * 1.5)); //for every 1 up in font-size, change 1.5 down in top;
+        top: calc(50vh - calc(#{$caymusFont} * 1.6)); //for every 1 up in font-size, change 1.6 down in top;
         transform: translateX(-50%);
     }
 }
@@ -318,13 +318,7 @@ h3{
         top: 25%;
         text-align: center;
         border-radius: 5px;
-        overflow: scroll;
-
-        -ms-overflow-style: none; //no scrollbar, will overflow when height ~1/3W
-        scrollbar-width: none; 
-        &:-webkit-scrollbar{
-            display: none;
-        }
+        overflow: hidden;
 
         display: flex;
         flex-direction: column;
@@ -606,12 +600,17 @@ h3{
     #about{
         #aboutContent{
             top: 10%;
-            width: 75vw;
+            width: 50vw;
+
+            p{
+                font-size: 1.9vmax;
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
 
             #socialDiv{
                 margin-top: 15%;
-                left: 0;
-                width: 80%;
                 .socials{
                     img{
                         width: 3vh;
@@ -620,6 +619,10 @@ h3{
                 }
             }
 
+        }
+
+        #aboutImg{
+            display: none;
         }
     }
 
@@ -631,7 +634,7 @@ h3{
         font-size: 10vw;
 
         p{
-            top: calc(50vh - calc(10vw * 1.5))
+            top: calc(50vh - calc(10vw * 1.61))
         }
 
         a{
@@ -644,18 +647,6 @@ h3{
         
         #greenProjects, #whiteProjects{
             right: 5%;
-        }
-    }
-
-    #about{
-        #aboutImg{
-            img{
-                display: none;
-            }
-        }
-
-        #aboutContent{
-            left: 15%;
         }
     }
 

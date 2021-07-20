@@ -31,7 +31,7 @@ body {
 #white p, #green p {
   position: absolute;
   left: 50%;
-  top: calc(50vh - calc(10vh * 1.5));
+  top: calc(50vh - calc(10vh * 1.6));
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -325,9 +325,7 @@ h3:hover:after {
   top: 25%;
   text-align: center;
   border-radius: 5px;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,10 +341,6 @@ h3:hover:after {
           justify-content: space-evenly;
   background-color: #eee;
   color: #263d35;
-}
-
-#projects .carousel_cell:-webkit-scrollbar {
-  display: none;
 }
 
 #projects .carousel_cell .carGit {
@@ -577,16 +571,22 @@ h3:hover:after {
   }
   #about #aboutContent {
     top: 10%;
-    width: 75vw;
+    width: 50vw;
+  }
+  #about #aboutContent p {
+    font-size: 1.9vmax;
+    width: 90%;
+    margin-bottom: 20px;
   }
   #about #aboutContent #socialDiv {
     margin-top: 15%;
-    left: 0;
-    width: 80%;
   }
   #about #aboutContent #socialDiv .socials img {
     width: 3vh;
     height: 3vh;
+  }
+  #about #aboutImg {
+    display: none;
   }
   .nav {
     margin-top: 2%;
@@ -595,7 +595,7 @@ h3:hover:after {
     font-size: 10vw;
   }
   #white p, #green p {
-    top: calc(50vh - calc(10vw * 1.5));
+    top: calc(50vh - calc(10vw * 1.61));
   }
   #white a, #green a {
     font-size: 3vw;
@@ -605,12 +605,6 @@ h3:hover:after {
   }
   #white #greenProjects, #white #whiteProjects, #green #greenProjects, #green #whiteProjects {
     right: 5%;
-  }
-  #about #aboutImg img {
-    display: none;
-  }
-  #about #aboutContent {
-    left: 15%;
   }
   #projects h3 {
     top: 7.5%;
