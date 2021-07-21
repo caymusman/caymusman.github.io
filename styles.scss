@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap'); //classic
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); //calculator
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap'); //pomodoro
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap'); //air
@@ -460,6 +461,12 @@ h3{
                 }
             }
         }
+
+        .carTech{
+            span{
+                padding-top: 8px;
+            }
+        }
         
     }
 }
@@ -490,6 +497,34 @@ h3{
                 padding-top: 3px;
                 background-color: #eee !important;
                 color: #333 !important;
+            }
+        }
+    }
+}
+
+#classic{
+    &:hover{
+        background-color: #6b3b4e;
+        font-family: 'Josefin Sans', sans-serif;
+        color: #f1ede8;
+
+        .carTitle{
+            font-size: 1.5vmax;
+
+            a{
+                &:visited, &:link, &:hover, &:active{
+                    color: #f1ede8;
+                }
+            }
+        }
+
+    
+        .carTech{
+            font-size: 1vmax;
+            span{
+                padding-top: 8px;
+                background-color: #f1ede8 !important;
+                color: #3E3940 !important;
             }
         }
     }

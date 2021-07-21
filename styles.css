@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap");
@@ -462,6 +463,10 @@ h3:hover:after {
   color: #fff;
 }
 
+#modular:hover .carTech span {
+  padding-top: 8px;
+}
+
 #air:hover {
   background-image: url("/img/60-lines.png"), -webkit-gradient(linear, left top, left bottom, from(#718ac0), to(#bbc7e1));
   background-image: url("/img/60-lines.png"), linear-gradient(#718ac0, #bbc7e1);
@@ -489,6 +494,30 @@ h3:hover:after {
   padding-top: 3px;
   background-color: #eee !important;
   color: #333 !important;
+}
+
+#classic:hover {
+  background-color: #6b3b4e;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #f1ede8;
+}
+
+#classic:hover .carTitle {
+  font-size: 1.5vmax;
+}
+
+#classic:hover .carTitle a:visited, #classic:hover .carTitle a:link, #classic:hover .carTitle a:hover, #classic:hover .carTitle a:active {
+  color: #f1ede8;
+}
+
+#classic:hover .carTech {
+  font-size: 1vmax;
+}
+
+#classic:hover .carTech span {
+  padding-top: 8px;
+  background-color: #f1ede8 !important;
+  color: #3E3940 !important;
 }
 
 #pomodoro:hover {
