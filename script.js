@@ -81,7 +81,6 @@ function handleResize(){
 
 window.addEventListener("resize", handleResize);
 
-let root = document.documentElement;
 window.onload = () => {
     setTimeout(spellOut, 1000, 0);
 

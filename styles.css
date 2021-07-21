@@ -169,6 +169,10 @@ h3:hover:after {
   top: 17%;
 }
 
+#about #aboutContent #insideAboutImg {
+  display: none;
+}
+
 #about #aboutContent h3 {
   width: 11%;
 }
@@ -598,21 +602,38 @@ h3:hover:after {
   h3 {
     font-size: 5vw;
   }
+  #about {
+    position: relative;
+  }
   #about #aboutContent {
-    top: 10%;
-    width: 60vw;
+    top: 5%;
+    width: 90vw;
+  }
+  #about #aboutContent #insideAboutImg {
+    display: block;
+    float: right;
+    margin: 5%;
+    margin-top: -2%;
+  }
+  #about #aboutContent #insideAboutImg img {
+    width: 30vw;
+    border-radius: 50%;
   }
   #about #aboutContent p {
-    font-size: 1.9vmax;
+    font-size: 2.2vmax;
     width: 90%;
     margin-bottom: 20px;
   }
   #about #aboutContent #socialDiv {
-    margin-top: 15%;
+    width: 70%;
+    margin-top: 10%;
+  }
+  #about #aboutContent #socialDiv .socials {
+    width: 80%;
   }
   #about #aboutContent #socialDiv .socials img {
-    width: 3vh;
-    height: 3vh;
+    width: 3.7vh;
+    height: 3.7vh;
   }
   #about #aboutImg {
     display: none;
@@ -664,6 +685,7 @@ h3:hover:after {
     font-size: 1.8vmax;
   }
   #projects .carousel_cell .carTech {
+    width: 80%;
     border: none;
     font-size: 1.3vmax;
   }

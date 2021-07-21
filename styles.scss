@@ -160,6 +160,10 @@ h3{
         position: relative;
         top: 17%;
 
+        #insideAboutImg{
+            display: none;
+        }
+
         h3{
             width: 11%;
             &:after{
@@ -633,23 +637,38 @@ h3{
     }
 
     #about{
+        position: relative;
         #aboutContent{
-            top: 10%;
-            width: 60vw;
+            top: 5%;
+            width: 90vw;
+
+            #insideAboutImg{
+                display: block;
+                float: right;
+                margin: 5%;
+                margin-top: -2%;
+
+                img{
+                    width: 30vw;
+                    border-radius: 50%;
+                }
+            }
 
             p{
-                font-size: 1.9vmax;
+                font-size: 2.2vmax;
                 width: 90%;
                 margin-bottom: 20px;
             }
 
 
             #socialDiv{
-                margin-top: 15%;
+                width: 70%;
+                margin-top: 10%;
                 .socials{
+                    width: 80%;
                     img{
-                        width: 3vh;
-                        height: 3vh;
+                        width: 3.7vh;
+                        height: 3.7vh;
                     }
                 }
             }
@@ -700,7 +719,6 @@ h3{
         }
     }
 
-    //handle no hover (together with ^^ it handles mobile)
 
     @media screen and (hover: none){
         #projects{
@@ -725,6 +743,7 @@ h3{
                     font-size: 1.8vmax;
                 }
                 .carTech{
+                    width: 80%;
                     border: none;
                     font-size: 1.3vmax;
 
