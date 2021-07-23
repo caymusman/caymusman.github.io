@@ -457,6 +457,10 @@ h3:hover:after {
   background-color: #fcfae0;
 }
 
+.webpack {
+  background-color: rgba(141, 214, 249, 0.35);
+}
+
 #modular:hover {
   background-image: none;
   background-color: #b6a8b5;
