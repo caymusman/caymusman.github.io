@@ -21,20 +21,20 @@ body {
   padding: 0;
 }
 
-#white, #green {
+#white,
+#green {
   position: absolute;
   white-space: nowrap;
   overflow: hidden;
   font-size: 10vh;
   text-align: center;
 }
-
-#white p, #green p {
+#white p,
+#green p {
   position: absolute;
   left: 50%;
-  top: calc(50vh - calc(10vh * 1.6));
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: calc(50vh - 10vh * 1.6);
+  transform: translateX(-50%);
 }
 
 #green {
@@ -43,19 +43,16 @@ body {
   width: 100%;
   height: 100vh;
 }
-
 #green p::-moz-selection, #green a::-moz-selection {
   background-color: #263d35;
 }
-
-#green p::selection, #green a::selection {
+#green p::selection,
+#green a::selection {
   background-color: #263d35;
 }
-
 #green a:visited, #green a:link, #green a:hover, #green a:active {
   color: #eee;
 }
-
 #green a:after {
   border-bottom: 2px solid #eee;
 }
@@ -67,19 +64,16 @@ body {
   height: 50%;
   cursor: pointer;
 }
-
 #white p::-moz-selection, #white a::-moz-selection {
   background-color: #eee;
 }
-
-#white p::selection, #white a::selection {
+#white p::selection,
+#white a::selection {
   background-color: #eee;
 }
-
 #white a:visited, #white a:link, #white a:hover, #white a:active {
   color: #263d35;
 }
-
 #white a:after {
   border-bottom: 2px solid #263d35;
 }
@@ -87,15 +81,12 @@ body {
 h3 {
   font-size: 2vmax;
 }
-
 h3:after {
   content: "";
   display: block;
   width: 0%;
-  -webkit-transition: width .5s;
-  transition: width .5s;
+  transition: width 0.5s;
 }
-
 h3:hover:after {
   width: 100%;
 }
@@ -104,32 +95,22 @@ h3:hover:after {
   margin-top: 1%;
   position: absolute;
   right: 3%;
-  -webkit-transition-delay: 3s;
-          transition-delay: 3s;
-  -webkit-transition-duration: .8s;
-          transition-duration: .8s;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transition-delay: 3s;
+  transition-duration: 0.8s;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
-
 .nav a {
   margin: 6px;
   font-size: 1.2vmax;
   text-decoration: none;
 }
-
 .nav a:after {
   content: "";
   display: block;
   width: 35%;
-  -webkit-transition: width .5s;
-  transition: width .5s;
+  transition: width 0.5s;
 }
-
 .nav a:hover:after {
   width: 100%;
 }
@@ -139,126 +120,102 @@ h3:hover:after {
   width: 100vw;
   background: #eee;
   color: #263d35;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   overflow: hidden;
 }
-
 #about #aboutImg {
   position: relative;
   width: 25vw;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
-
 #about #aboutImg img {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
 }
-
 #about #aboutContent {
   height: 40vh;
   width: 40vw;
   position: relative;
   top: 17%;
 }
-
 #about #aboutContent #insideAboutImg {
   display: none;
 }
-
 #about #aboutContent h3 {
   width: 11%;
 }
-
 #about #aboutContent h3:after {
   border-bottom: 2px solid #263d35;
 }
-
 #about #aboutContent #socialDiv {
   width: 40%;
   position: relative;
   left: 20%;
   margin-top: 8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
-
 #about #aboutContent #socialDiv .socials img {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: 3%;
 }
-
 #about #aboutContent p {
   width: 80%;
   font-size: 2vh;
   line-height: 1.6;
 }
-
 #about #aboutContent p a {
   color: #263d35;
   text-decoration: none;
 }
-
 #about #aboutContent p a:visited, #about #aboutContent p a:link, #about #aboutContent p a:hover, #about #aboutContent p a:active {
   color: #263d35;
 }
-
 #about #aboutContent p #nameSpan:hover {
   text-shadow: -1px -1px black;
 }
-
-#about #aboutContent p #seattleSpan:hover {
-  color: #4444ee;
+#about #aboutContent p #locationSpan:hover {
+  color: rgb(68, 68, 238);
 }
-
 #about #aboutContent p #brownSpan:hover {
   color: brown;
 }
-
 #about #aboutContent p #memeSpan:hover {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1.65vh;
 }
-
 #about #aboutContent p #majorSpan:hover span {
   display: none;
 }
-
 #about #aboutContent p #majorSpan:hover:after {
-  content: 'major';
+  content: "major";
   padding-right: 6vh;
 }
-
 #about #aboutContent p #loveSpan {
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
-
 #about #aboutContent p #loveSpan:hover {
   color: #ad0000;
   font-size: 2.5vh;
+}
+#about #aboutContent p .ekotrope {
+  transition: all 1s;
+}
+#about #aboutContent p .ekotrope:hover {
+  color: #005a76;
+  text-decoration: underline;
 }
 
 #projects {
   height: 100vh;
   width: 100vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
 }
-
 #projects h3 {
   color: #eee;
   position: absolute;
@@ -266,63 +223,46 @@ h3:hover:after {
   top: 15%;
   z-index: 9;
 }
-
 #projects h3:after {
   border-bottom: 2px solid #eee;
 }
-
 #projects img {
   height: 6vh;
   cursor: pointer;
   position: absolute;
-  -webkit-filter: drop-shadow(2px 2px 2px black);
-          filter: drop-shadow(2px 2px 2px black);
+  filter: drop-shadow(2px 2px 2px black);
 }
-
 #projects img:active {
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
-
 #projects #carPrev {
   left: 7%;
   top: 48%;
   cursor: pointer;
   z-index: 9;
 }
-
 #projects #carNext {
   left: 93%;
   top: 48%;
 }
-
 #projects .scene {
   width: 80%;
   height: 80%;
   position: relative;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
 }
-
 #projects .carousel {
   width: 100%;
   height: 100%;
   position: absolute;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
+  transform-style: preserve-3d;
   transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
 }
-
 #projects .carousel_cell {
-  -webkit-box-shadow: 1px 1px 1px 1px black;
-          box-shadow: 1px 1px 1px 1px black;
+  box-shadow: 1px 1px 1px 1px black;
   position: absolute;
   width: 40vw;
   height: 40vh;
@@ -331,48 +271,32 @@ h3:hover:after {
   text-align: center;
   border-radius: 5px;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   background-color: #eee;
   color: #263d35;
 }
-
 #projects .carousel_cell .carGit {
   position: absolute;
   top: 12%;
   right: 15%;
 }
-
 #projects .carousel_cell .carGit img {
   height: 2vmax;
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
-
 #projects .carousel_cell .carGit img:nth-child(2) {
   display: none;
 }
-
 #projects .carousel_cell .carTitle {
   font-size: 1.7vmax;
   text-align: start;
 }
-
 #projects .carousel_cell .carTitle a:visited, #projects .carousel_cell .carTitle a:link, #projects .carousel_cell .carTitle a:hover, #projects .carousel_cell .carTitle a:active {
   color: #263d35;
 }
-
 #projects .carousel_cell .carDesc {
   font-size: 1.2vmax;
   width: 50%;
@@ -381,42 +305,34 @@ h3:hover:after {
   font-style: italic;
   background-color: #eee;
 }
-
 #projects .carousel_cell .carTech {
   font-size: 1.2vmax;
   background-color: #eee;
 }
-
 #projects .carousel_cell .carTech span {
   display: inline-block;
   border-radius: 3px;
   padding: 5px 7px;
   margin: 5px;
 }
-
 #projects .carousel_cell:hover .carTech {
   background-color: revert;
 }
-
 #projects .carousel_cell:hover .carTech span {
   background-color: #555;
   color: white;
 }
-
 #projects .carousel_cell:hover .carDesc {
   background-color: revert;
   font-style: normal;
   border: none;
 }
-
 #projects .carousel_cell:hover .carGit {
   background-color: revert;
 }
-
 #projects .carousel_cell:hover .carGit img:nth-child(1) {
   display: none;
 }
-
 #projects .carousel_cell:hover .carGit img:nth-child(2) {
   display: block;
 }
@@ -430,7 +346,7 @@ h3:hover:after {
 }
 
 .apis {
-  background-color: #d4f1f5;
+  background-color: rgb(212, 241, 245);
 }
 
 .scss {
@@ -446,15 +362,15 @@ h3:hover:after {
 }
 
 .html {
-  background-color: #fae4e4;
+  background-color: rgb(250, 228, 228);
 }
 
 .css {
-  background-color: #dcdbf5;
+  background-color: rgb(220, 219, 245);
 }
 
 .js {
-  background-color: #fcfae0;
+  background-color: rgb(252, 250, 224);
 }
 
 .webpack {
@@ -466,38 +382,30 @@ h3:hover:after {
   background-color: #b6a8b5;
   color: #fff;
 }
-
 #modular:hover .carTitle a:visited, #modular:hover .carTitle a:link, #modular:hover .carTitle a:hover, #modular:hover .carTitle a:active {
   color: #fff;
 }
-
 #modular:hover .carTech span {
   padding-top: 8px;
 }
 
 #air:hover {
-  background-image: url("/img/60-lines.png"), -webkit-gradient(linear, left top, left bottom, from(#718ac0), to(#bbc7e1));
-  background-image: url("/img/60-lines.png"), linear-gradient(#718ac0, #bbc7e1);
-  font-family: 'Noto Serif KR', serif;
+  background-image: url("/img/60-lines.png"), linear-gradient(rgb(113, 138, 192), rgb(187, 199, 225));
+  font-family: "Noto Serif KR", serif;
   color: #eee;
 }
-
 #air:hover .carTitle {
   font-size: 1.5vmax;
 }
-
 #air:hover .carTitle a:visited, #air:hover .carTitle a:link, #air:hover .carTitle a:hover, #air:hover .carTitle a:active {
   color: #eee;
 }
-
 #air:hover .carDesc {
   font-size: 1vmax;
 }
-
 #air:hover .carTech {
   font-size: 1vmax;
 }
-
 #air:hover .carTech span {
   padding-top: 3px;
   background-color: #eee !important;
@@ -506,46 +414,38 @@ h3:hover:after {
 
 #classic:hover {
   background-color: #6b3b4e;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color: #f1ede8;
 }
-
 #classic:hover .carTitle {
   font-size: 1.5vmax;
 }
-
 #classic:hover .carTitle a:visited, #classic:hover .carTitle a:link, #classic:hover .carTitle a:hover, #classic:hover .carTitle a:active {
   color: #f1ede8;
 }
-
 #classic:hover .carTech {
   font-size: 1vmax;
 }
-
 #classic:hover .carTech span {
   padding-top: 8px;
   background-color: #f1ede8 !important;
-  color: #3E3940 !important;
+  color: #3e3940 !important;
 }
 
 #pomodoro:hover {
   background-image: none;
   background-color: #d1d1d1;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-
 #pomodoro:hover .carTitle {
   font-size: 1.5vmax;
 }
-
 #pomodoro:hover .carTitle a:visited, #pomodoro:hover .carTitle a:link, #pomodoro:hover .carTitle a:hover, #pomodoro:hover .carTitle a:active {
   color: black;
 }
-
 #pomodoro:hover .carDesc {
   font-size: 1vmax;
 }
-
 #pomodoro:hover .carTech {
   font-size: 1vmax;
 }
@@ -555,7 +455,6 @@ h3:hover:after {
   background-color: #fff;
   color: #6d6d6d;
 }
-
 #drum-machine:hover .carTitle a:visited, #drum-machine:hover .carTitle a:link, #drum-machine:hover .carTitle a:hover, #drum-machine:hover .carTitle a:active {
   color: #6d6d6d;
 }
@@ -563,22 +462,18 @@ h3:hover:after {
 #calculator:hover {
   background-color: #3c3c3d;
   background-image: url("/img/45-degree-fabric-light.png");
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   color: white;
 }
-
 #calculator:hover .carTitle {
   font-size: 1.5vmax;
 }
-
 #calculator:hover .carTitle a:visited, #calculator:hover .carTitle a:link, #calculator:hover .carTitle a:hover, #calculator:hover .carTitle a:active {
   color: white;
 }
-
 #calculator:hover .carDesc {
   font-size: 1vmax;
 }
-
 #calculator:hover .carTech {
   font-size: 1vmax;
 }
@@ -588,15 +483,12 @@ h3:hover:after {
   background: #263d35;
   color: #eee;
 }
-
 #this:hover .carTitle a:visited, #this:hover .carTitle a:link, #this:hover .carTitle a:hover, #this:hover .carTitle a:active {
   color: #eee;
 }
-
 #this:hover .carTech {
   font-size: 1vmax;
 }
-
 #this:hover .carTech span {
   background-color: #eee !important;
   color: #263d35 !important;
@@ -645,19 +537,28 @@ h3:hover:after {
   .nav {
     margin-top: 2%;
   }
-  #white, #green {
+  #white,
+  #green {
     font-size: 10vw;
   }
-  #white p, #green p {
-    top: calc(50vh - calc(10vw * 1.61));
+  #white p,
+  #green p {
+    top: calc(50vh - 16.1vw);
   }
-  #white a, #green a {
+  #white a,
+  #green a {
     font-size: 3vw;
   }
-  #white #greenAbout, #white #whiteAbout, #green #greenAbout, #green #whiteAbout {
+  #white #greenAbout,
+  #white #whiteAbout,
+  #green #greenAbout,
+  #green #whiteAbout {
     right: 20%;
   }
-  #white #greenProjects, #white #whiteProjects, #green #greenProjects, #green #whiteProjects {
+  #white #greenProjects,
+  #white #whiteProjects,
+  #green #greenProjects,
+  #green #whiteProjects {
     right: 5%;
   }
   #projects h3 {
@@ -671,7 +572,6 @@ h3:hover:after {
     top: 48%;
   }
 }
-
 @media screen and (orientation: portrait) and (hover: none) {
   #projects .carousel_cell .carGit {
     top: 12%;
@@ -716,9 +616,8 @@ h3:hover:after {
     color: #eee;
   }
   #projects #air {
-    background-image: url("/img/60-lines.png"), -webkit-gradient(linear, left top, left bottom, from(#718ac0), to(#bbc7e1));
-    background-image: url("/img/60-lines.png"), linear-gradient(#718ac0, #bbc7e1);
-    font-family: 'Noto Serif KR', serif;
+    background-image: url("/img/60-lines.png"), linear-gradient(rgb(113, 138, 192), rgb(187, 199, 225));
+    font-family: "Noto Serif KR", serif;
     color: #eee;
   }
   #projects #air .carTitle a:visited, #projects #air .carTitle a:link, #projects #air .carTitle a:hover, #projects #air .carTitle a:active {
@@ -739,7 +638,7 @@ h3:hover:after {
   #projects #pomodoro {
     background-image: none;
     background-color: #d1d1d1;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
   #projects #pomodoro .carTitle a:visited, #projects #pomodoro .carTitle a:link, #projects #pomodoro .carTitle a:hover, #projects #pomodoro .carTitle a:active {
     color: black;
@@ -775,7 +674,7 @@ h3:hover:after {
   #projects #calculator {
     background-color: #3c3c3d;
     background-image: url("/img/45-degree-fabric-light.png");
-    font-family: 'Share Tech Mono', monospace;
+    font-family: "Share Tech Mono", monospace;
     color: white;
   }
   #projects #calculator .carTitle a:visited, #projects #calculator .carTitle a:link, #projects #calculator .carTitle a:hover, #projects #calculator .carTitle a:active {
@@ -809,5 +708,4 @@ h3:hover:after {
     background-color: #eee !important;
     color: #263d35 !important;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

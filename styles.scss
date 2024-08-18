@@ -1,23 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap'); //classic
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); //calculator
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap'); //pomodoro
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap'); //air
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap"); //classic
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"); //calculator
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"); //pomodoro
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap"); //air
 
 $green: #263d35;
 $caymusFont: 10vh;
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
-    background:$green;
+body {
+    background: $green;
     margin: 0;
     padding: 0;
 }
 
-.landing{
+.landing {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -26,13 +25,15 @@ body{
     padding: 0;
 }
 
-#white, #green { //overlapping Divs to create color swap effect (mix-blend-mode doesn't work with white)
+#white,
+#green {
+    //overlapping Divs to create color swap effect (mix-blend-mode doesn't work with white)
     position: absolute;
     white-space: nowrap;
     overflow: hidden;
     font-size: $caymusFont;
     text-align: center;
-    p{
+    p {
         position: absolute;
         left: 50%;
         top: calc(50vh - calc(#{$caymusFont} * 1.6)); //for every 1 up in font-size, change 1.6 down in top;
@@ -46,93 +47,102 @@ body{
     width: 100%;
     height: 100vh;
 
-    p, a{
-        &::selection{
+    p,
+    a {
+        &::selection {
             background-color: $green;
         }
     }
 
-    a{
-        &:visited, &:link, &:hover, &:active{
+    a {
+        &:visited,
+        &:link,
+        &:hover,
+        &:active {
             color: #eee;
         }
 
-        &:after{
+        &:after {
             border-bottom: 2px solid #eee;
         }
     }
 }
 
-#white{
+#white {
     background-color: #eee;
     color: $green;
     width: 100vw;
     height: 50%;
     cursor: pointer;
 
-    p, a{
-        &::selection{
+    p,
+    a {
+        &::selection {
             background-color: #eee;
         }
     }
 
-    a{
-        &:visited, &:link, &:hover, &:active{
+    a {
+        &:visited,
+        &:link,
+        &:hover,
+        &:active {
             color: $green;
         }
 
-        &:after{
+        &:after {
             border-bottom: 2px solid $green;
         }
     }
 }
 
-h3{
+h3 {
     font-size: 2vmax;
 
-    &:after{ //underline for sections
+    &:after {
+        //underline for sections
         content: "";
         display: block;
         width: 0%;
-        transition: width .5s;
+        transition: width 0.5s;
     }
 
-    &:hover{
-        &:after{
+    &:hover {
+        &:after {
             width: 100%;
         }
     }
 }
-.nav{ //nav at top w/ underlines
+.nav {
+    //nav at top w/ underlines
     margin-top: 1%;
     position: absolute;
     right: 3%;
     transition-delay: 3s;
-    transition-duration: .8s;
+    transition-duration: 0.8s;
     display: flex;
     justify-content: space-evenly;
 
-    a{
-        margin:6px;
+    a {
+        margin: 6px;
         font-size: 1.2vmax;
         text-decoration: none;
-        &:after{
+        &:after {
             content: "";
             display: block;
             width: 35%;
-            transition: width .5s;
-        
+            transition: width 0.5s;
         }
-    
-        &:hover{
-            &:after{
+
+        &:hover {
+            &:after {
                 width: 100%;
             }
         }
     }
 }
 
-#about{
+#about {
     height: 100vh;
     width: 100vw;
     background: #eee;
@@ -141,37 +151,38 @@ h3{
     justify-content: center;
     overflow: hidden; //img overflows height when width still large
 
-    #aboutImg{
+    #aboutImg {
         position: relative;
         width: 25vw;
         display: grid;
         place-items: center;
 
-        img{ //auto resize img
+        img {
+            //auto resize img
             max-width: 100%;
             height: auto;
             border-radius: 50%;
         }
     }
 
-    #aboutContent{
+    #aboutContent {
         height: 40vh;
         width: 40vw;
         position: relative;
         top: 17%;
 
-        #insideAboutImg{
+        #insideAboutImg {
             display: none;
         }
 
-        h3{
+        h3 {
             width: 11%;
-            &:after{
+            &:after {
                 border-bottom: 2px solid $green;
             }
         }
 
-        #socialDiv{
+        #socialDiv {
             width: 40%;
             position: relative;
             left: 20%;
@@ -179,8 +190,9 @@ h3{
             display: flex;
             justify-content: space-evenly;
 
-            .socials{ //social icons
-                img{
+            .socials {
+                //social icons
+                img {
                     width: 1.5rem;
                     height: 1.5rem;
                     margin-left: 3%;
@@ -188,109 +200,117 @@ h3{
             }
         }
 
-        p{ 
+        p {
             width: 80%;
             font-size: 2vh;
             line-height: 1.6;
 
-            a{
-                color:$green;
+            a {
+                color: $green;
                 text-decoration: none;
-                &:visited, &:link, &:hover, &:active{
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: $green;
                 }
             }
 
             //handle text effects in paragraph
-    
-            #nameSpan{
-                &:hover{
+
+            #nameSpan {
+                &:hover {
                     text-shadow: -1px -1px black;
                 }
             }
-    
-            #seattleSpan{
-                &:hover{
+
+            #locationSpan {
+                &:hover {
                     color: rgb(68, 68, 238);
                 }
             }
 
-            #brownSpan{
-                &:hover{
+            #brownSpan {
+                &:hover {
                     color: brown;
                 }
             }
 
-            #memeSpan{
-                &:hover{
-                    font-family: 'Roboto Mono', monospace;
+            #memeSpan {
+                &:hover {
+                    font-family: "Roboto Mono", monospace;
                     font-size: 1.65vh;
                 }
             }
 
-            #majorSpan{
-                &:hover{
-                    span{
+            #majorSpan {
+                &:hover {
+                    span {
                         display: none;
                     }
-            
-                    &:after{
-                        content: 'major';
+
+                    &:after {
+                        content: "major";
                         padding-right: 6vh;
                     }
                 }
             }
 
-            #loveSpan{
+            #loveSpan {
                 transition: all 1s;
-                &:hover{
+                &:hover {
                     color: darken(red, 16%);
                     font-size: 2.5vh;
                 }
             }
+
+            .ekotrope {
+                transition: all 1s;
+                &:hover {
+                    color: #005a76;
+                    text-decoration: underline;
+                }
+            }
         }
     }
-
 }
 
-
-
-#projects{
+#projects {
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
     position: relative;
 
-    h3{
+    h3 {
         color: #eee;
         position: absolute;
         left: 12.5%;
         top: 15%;
         z-index: 9;
-        &:after{
+        &:after {
             border-bottom: 2px solid #eee;
         }
     }
 
-    img{
+    img {
         height: 6vh;
         cursor: pointer;
         position: absolute;
         filter: drop-shadow(2px 2px 2px black);
 
-        &:active{
+        &:active {
             filter: none;
         }
     }
 
-    #carPrev{
+    #carPrev {
         left: 7%;
         top: 48%;
         cursor: pointer;
         z-index: 9;
     }
 
-    #carNext{
+    #carNext {
         left: 93%;
         top: 48%;
     }
@@ -304,17 +324,17 @@ h3{
         transform: translate(-50%, -50%);
         perspective: 1000px;
     }
-        
+
     .carousel {
         width: 100%;
         height: 100%;
         position: absolute;
         transform-style: preserve-3d;
         transition: transform 1s;
-        
     }
-        
-    .carousel_cell { //each cell w/ size. If changed, change corresponding JS bc math
+
+    .carousel_cell {
+        //each cell w/ size. If changed, change corresponding JS bc math
         box-shadow: 1px 1px 1px 1px black;
         position: absolute;
         width: 40vw;
@@ -330,39 +350,40 @@ h3{
         align-items: center;
         justify-content: space-evenly;
 
-       
         background-color: #eee;
         color: $green;
 
         //default Card stylings to follow. On hover, go to unique stylings
 
-        .carGit{
+        .carGit {
             position: absolute;
             top: 12%;
             right: 15%;
 
-            img{
+            img {
                 height: 2vmax;
                 filter: none;
 
-                &:nth-child(2){
+                &:nth-child(2) {
                     display: none;
                 }
             }
         }
 
-        .carTitle{
+        .carTitle {
             font-size: 1.7vmax;
             text-align: start;
-            a{
-                &:visited, &:link, &:hover, &:active{
+            a {
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: $green;
                 }
             }
-            
         }
 
-        .carDesc{
+        .carDesc {
             font-size: 1.2vmax;
             width: 50%;
             padding: 10px;
@@ -371,11 +392,11 @@ h3{
             background-color: #eee;
         }
 
-        .carTech{
+        .carTech {
             font-size: 1.2vmax;
             background-color: #eee;
 
-            span{
+            span {
                 display: inline-block;
                 border-radius: 3px;
                 padding: 5px 7px;
@@ -383,125 +404,129 @@ h3{
             }
         }
 
-        &:hover{
-            .carTech{
+        &:hover {
+            .carTech {
                 background-color: revert;
-                span{
+                span {
                     background-color: #555;
                     color: white;
                 }
             }
 
-            .carDesc{
+            .carDesc {
                 background-color: revert;
                 font-style: normal;
                 border: none;
             }
 
-            .carGit{
+            .carGit {
                 background-color: revert;
-                img{
-                    &:nth-child(1){
+                img {
+                    &:nth-child(1) {
                         display: none;
                     }
-        
-                    &:nth-child(2){
+
+                    &:nth-child(2) {
                         display: block;
-                    
                     }
                 }
             }
         }
-    }   
+    }
 }
 
 //tech bubble colors
-.node{
+.node {
     background-color: #ecdefc;
 }
 
-.express{
+.express {
     background-color: #fcdfc3;
 }
 
-.apis{
+.apis {
     background-color: rgb(212, 241, 245);
 }
 
-.scss{
-    background-color:  #d9e3da
+.scss {
+    background-color: #d9e3da;
 }
 
-.react{
+.react {
     background-color: #d9dbe7;
 }
 
-.webaudio{
-    background-color:  #ffefd7;
+.webaudio {
+    background-color: #ffefd7;
 }
 
-.html{
+.html {
     background-color: rgb(250, 228, 228);
 }
 
-.css{
+.css {
     background-color: rgb(220, 219, 245);
 }
 
-.js{
+.js {
     background-color: rgb(252, 250, 224);
 }
 
-.webpack{
-    background-color: rgba(141,214,249,.35);
+.webpack {
+    background-color: rgba(141, 214, 249, 0.35);
 }
 
 //unique hover styling
-#modular{
-    &:hover{
+#modular {
+    &:hover {
         background-image: none;
         background-color: #b6a8b5;
         color: #fff;
-        .carTitle{
-            a{
-                &:visited, &:link, &:hover, &:active{
+        .carTitle {
+            a {
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: #fff;
                 }
             }
         }
 
-        .carTech{
-            span{
+        .carTech {
+            span {
                 padding-top: 8px;
             }
         }
-        
     }
 }
 
-#air{
-    &:hover{
+#air {
+    &:hover {
         background-image: url("/img/60-lines.png"), linear-gradient(rgb(113, 138, 192), rgb(187, 199, 225));
-        font-family: 'Noto Serif KR', serif;
+        font-family: "Noto Serif KR", serif;
         color: #eee;
 
-        .carTitle{
+        .carTitle {
             font-size: 1.5vmax;
 
-            a{
-                &:visited, &:link, &:hover, &:active{
+            a {
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: #eee;
                 }
             }
         }
-    
-        .carDesc{
+
+        .carDesc {
             font-size: 1vmax;
         }
-    
-        .carTech{
+
+        .carTech {
             font-size: 1vmax;
-            span{
+            span {
                 padding-top: 3px;
                 background-color: #eee !important;
                 color: #333 !important;
@@ -510,69 +535,77 @@ h3{
     }
 }
 
-#classic{
-    &:hover{
+#classic {
+    &:hover {
         background-color: #6b3b4e;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
         color: #f1ede8;
 
-        .carTitle{
+        .carTitle {
             font-size: 1.5vmax;
 
-            a{
-                &:visited, &:link, &:hover, &:active{
+            a {
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: #f1ede8;
                 }
             }
         }
 
-    
-        .carTech{
+        .carTech {
             font-size: 1vmax;
-            span{
+            span {
                 padding-top: 8px;
                 background-color: #f1ede8 !important;
-                color: #3E3940 !important;
+                color: #3e3940 !important;
             }
         }
     }
 }
 
-#pomodoro{
-    &:hover{
+#pomodoro {
+    &:hover {
         background-image: none;
         background-color: #d1d1d1;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
 
-        .carTitle{
+        .carTitle {
             font-size: 1.5vmax;
 
-            a{
-                &:visited, &:link, &:hover, &:active{
+            a {
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: black;
                 }
             }
         }
-    
-        .carDesc{
+
+        .carDesc {
             font-size: 1vmax;
         }
-    
-        .carTech{
+
+        .carTech {
             font-size: 1vmax;
         }
     }
 }
 
-#drum-machine{
-    &:hover{
+#drum-machine {
+    &:hover {
         background-image: url("/img/batthern.png");
         background-color: #fff;
         color: darken(#8c8c8c, 12%);
 
-        .carTitle{
-            a{
-                &:visited, &:link, &:hover, &:active{
+        .carTitle {
+            a {
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: darken(#8c8c8c, 12%);
                 }
             }
@@ -580,50 +613,56 @@ h3{
     }
 }
 
-#calculator{
-    &:hover{
+#calculator {
+    &:hover {
         background-color: #3c3c3d;
         background-image: url("/img/45-degree-fabric-light.png");
-        font-family: 'Share Tech Mono', monospace;
+        font-family: "Share Tech Mono", monospace;
         color: white;
 
-        .carTitle{
+        .carTitle {
             font-size: 1.5vmax;
 
-            a{
-                &:visited, &:link, &:hover, &:active{
+            a {
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: white;
                 }
             }
         }
 
-        .carDesc{
+        .carDesc {
             font-size: 1vmax;
         }
 
-        .carTech{
+        .carTech {
             font-size: 1vmax;
         }
     }
 }
 
-#this{
-    &:hover{
+#this {
+    &:hover {
         background-image: none;
         background: $green;
         color: #eee;
 
-        .carTitle{
-            a{
-                &:visited, &:link, &:hover, &:active{
+        .carTitle {
+            a {
+                &:visited,
+                &:link,
+                &:hover,
+                &:active {
                     color: #eee;
                 }
             }
         }
 
-        .carTech{
+        .carTech {
             font-size: 1vmax;
-            span{
+            span {
                 background-color: #eee !important;
                 color: $green !important;
             }
@@ -631,289 +670,304 @@ h3{
     }
 }
 
-
-
 //handle height > width
-@media screen and (orientation: portrait){
-
-    h3{
+@media screen and (orientation: portrait) {
+    h3 {
         font-size: 5vw;
     }
 
-    #about{
+    #about {
         position: relative;
-        #aboutContent{
+        #aboutContent {
             top: 5%;
             width: 90vw;
 
-            #insideAboutImg{
+            #insideAboutImg {
                 display: block;
                 float: right;
                 margin: 5%;
                 margin-top: -2%;
 
-                img{
+                img {
                     width: 30vw;
                     border-radius: 50%;
                 }
             }
 
-            p{
+            p {
                 font-size: 2.2vmax;
                 width: 90%;
                 margin-bottom: 20px;
             }
 
-
-            #socialDiv{
+            #socialDiv {
                 width: 70%;
                 margin-top: 10%;
-                .socials{
+                .socials {
                     width: 80%;
-                    img{
+                    img {
                         width: 3.7vh;
                         height: 3.7vh;
                     }
                 }
             }
-
         }
 
-        #aboutImg{
+        #aboutImg {
             display: none;
         }
     }
 
-    .nav{
+    .nav {
         margin-top: 2%;
     }
 
-    #white, #green{
+    #white,
+    #green {
         font-size: 10vw;
 
-        p{
-            top: calc(50vh - calc(10vw * 1.61))
+        p {
+            top: calc(50vh - calc(10vw * 1.61));
         }
 
-        a{
+        a {
             font-size: 3vw;
         }
 
-        #greenAbout, #whiteAbout{
+        #greenAbout,
+        #whiteAbout {
             right: 20%;
         }
-        
-        #greenProjects, #whiteProjects{
+
+        #greenProjects,
+        #whiteProjects {
             right: 5%;
         }
     }
 
-    #projects{
-        h3{
+    #projects {
+        h3 {
             top: 7.5%;
         }
 
-        #carPrev{
+        #carPrev {
             left: 5%;
         }
-    
-        #carNext{
+
+        #carNext {
             left: 92%;
             top: 48%;
         }
     }
 
-
-    @media screen and (hover: none){
-        #projects{
+    @media screen and (hover: none) {
+        #projects {
             .carousel_cell {
-                .carGit{
+                .carGit {
                     top: 12%;
-                    img{
-                        &:nth-child(1){
+                    img {
+                        &:nth-child(1) {
                             display: none;
                         }
 
-                        &:nth-child(2){
+                        &:nth-child(2) {
                             display: block;
                         }
                     }
                 }
 
-                .carTitle{
+                .carTitle {
                     font-size: 2.1vmax;
                 }
-                .carDesc{
+                .carDesc {
                     font-size: 1.8vmax;
                 }
-                .carTech{
+                .carTech {
                     width: 80%;
                     border: none;
                     font-size: 1.3vmax;
 
-                    span{
+                    span {
                         margin: 2px;
                     }
                 }
-            }   
-            #modular{
+            }
+            #modular {
                 background-image: none;
                 background-color: #b6a8b5;
                 color: #fff;
-                .carTitle{
-                    a{
-                        &:visited, &:link, &:hover, &:active{
+                .carTitle {
+                    a {
+                        &:visited,
+                        &:link,
+                        &:hover,
+                        &:active {
                             color: #fff;
                         }
                     }
                 }
 
-                .carDesc{
+                .carDesc {
                     background-color: revert;
                     font-size: 1.5vmax;
                 }
 
-                .carTech{
+                .carTech {
                     background-color: revert;
-                    span{
+                    span {
                         background-color: #555;
                         color: #eee;
                     }
                 }
             }
-            
-            #air{
+
+            #air {
                 background-image: url("/img/60-lines.png"), linear-gradient(rgb(113, 138, 192), rgb(187, 199, 225));
-                font-family: 'Noto Serif KR', serif;
+                font-family: "Noto Serif KR", serif;
                 color: #eee;
-        
-                .carTitle{
-                    a{
-                        &:visited, &:link, &:hover, &:active{
+
+                .carTitle {
+                    a {
+                        &:visited,
+                        &:link,
+                        &:hover,
+                        &:active {
                             color: #eee;
                         }
                     }
                 }
-            
-                .carDesc{
-                    background-color: revert; 
+
+                .carDesc {
+                    background-color: revert;
                     font-size: 1.5vmax;
                     text-align: center;
                 }
-            
-                .carTech{
+
+                .carTech {
                     background-color: revert;
-                    span{
+                    span {
                         background-color: #eee;
                         color: #333;
                     }
                 }
             }
-            
-            #pomodoro{
+
+            #pomodoro {
                 background-image: none;
                 background-color: #d1d1d1;
-                font-family: 'Montserrat', sans-serif;
-        
-                .carTitle{
-                    a{
-                        &:visited, &:link, &:hover, &:active{
+                font-family: "Montserrat", sans-serif;
+
+                .carTitle {
+                    a {
+                        &:visited,
+                        &:link,
+                        &:hover,
+                        &:active {
                             color: black;
                         }
                     }
                 }
-            
-                .carDesc{
+
+                .carDesc {
                     background-color: revert;
                 }
 
-                .carTech{
+                .carTech {
                     background-color: revert;
-                    span{
+                    span {
                         background-color: #555;
                         color: #eee;
                     }
                 }
             }
-            
-            #drum-machine{
+
+            #drum-machine {
                 background-image: url("/img/batthern.png");
                 background-color: #fff;
                 color: darken(#8c8c8c, 12%);
-        
-                .carTitle{
-                    a{
-                        &:visited, &:link, &:hover, &:active{
+
+                .carTitle {
+                    a {
+                        &:visited,
+                        &:link,
+                        &:hover,
+                        &:active {
                             color: darken(#8c8c8c, 12%);
                         }
                     }
                 }
 
-                .carDesc{
+                .carDesc {
                     background-color: revert;
                 }
 
-                .carTech{
+                .carTech {
                     background-color: revert;
-                    span{
+                    span {
                         background-color: #555;
                         color: #eee;
                     }
                 }
             }
-            
-            #calculator{
+
+            #calculator {
                 background-color: #3c3c3d;
                 background-image: url("/img/45-degree-fabric-light.png");
-                font-family: 'Share Tech Mono', monospace;
+                font-family: "Share Tech Mono", monospace;
                 color: white;
-        
-                .carTitle{
-                    a{
-                        &:visited, &:link, &:hover, &:active{
+
+                .carTitle {
+                    a {
+                        &:visited,
+                        &:link,
+                        &:hover,
+                        &:active {
                             color: white;
                         }
                     }
                 }
-        
-                .carDesc{
+
+                .carDesc {
                     background-color: revert;
                 }
 
-                .carTech{
+                .carTech {
                     background-color: revert;
-                    span{
+                    span {
                         background-color: #555;
                         color: #eee;
                     }
                 }
             }
-            
-            #this{
+
+            #this {
                 background-image: none;
                 background: $green;
                 color: #eee;
-        
-                .carTitle{
-                    a{
-                        &:visited, &:link, &:hover, &:active{
+
+                .carTitle {
+                    a {
+                        &:visited,
+                        &:link,
+                        &:hover,
+                        &:active {
                             color: #eee;
                         }
                     }
                 }
 
-                .carDesc{
-                    background-color: revert; 
-                }
-        
-                .carTech{
+                .carDesc {
                     background-color: revert;
-                    span{
+                }
+
+                .carTech {
+                    background-color: revert;
+                    span {
                         background-color: #eee !important;
                         color: $green !important;
                     }
                 }
-            }        
+            }
         }
     }
 }
